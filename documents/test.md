@@ -21,7 +21,7 @@ As Grace Hopper said:
 * Item 3a
 * Item 3b
 
-![Test image](./images/test.png)
+![Test image](https://github.com/ljmesi/Genome_analysis/blob/master/images/test.png)
 
 http://github.com - automatic!
 [GitHub](http://github.com)
