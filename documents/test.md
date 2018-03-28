@@ -21,7 +21,7 @@ As Grace Hopper said:
 * Item 3a
 * Item 3b
 
-![Test image](/images/test.png)
+![Test image](./images/test.png)
 
 http://github.com - automatic!
 [GitHub](http://github.com)
