@@ -7,7 +7,7 @@
 ###### This is an <h6> tag
 
 As Grace Hopper said:
-> I’ve always been more interested
+> Iâ€™ve always been more interested
 > in the future than in the past.
 
 * Item 1
@@ -21,7 +21,7 @@ As Grace Hopper said:
 * Item 3a
 * Item 3b
 
-![Test image](/images/test.png)
+![Test image](./images/test.png)
 
 http://github.com - automatic!
 [GitHub](http://github.com)
@@ -30,12 +30,12 @@ http://github.com - automatic!
 
 ```javascript
 function test() {
-console.log("look ma’, no spaces");
+console.log("look maâ€™, no spaces");
 }
 ```
 
 function test() {
-console.log("look ma’, no spaces");
+console.log("look maâ€™, no spaces");
 }
 
 - [x] this is a complete item
