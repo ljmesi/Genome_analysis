@@ -14,15 +14,33 @@ What is the time frame for your project? Can you define some time checkpoints fo
 
 What types of data will you be handling? How much space do you need in order to store those data? (You might not know that in advance, but pay attention to this as you work and manage your available space!)
 
-1. Reads quality control
-   - FastQC
-   - ​
-2. Genome sequencing
-   1. Short Illumina reads
-   2. Long PacBio RSII & NanoPore (MinION) reads
-3. Alignment of the reads from transcriptome to the genome
-4. Comparison of transcriptome in rich medium and in human serum
-5. Tn-seq
+(IGV for visualization and sanity checking of the genomes)
+
+1. Reads quality control 
+
+   FastQC for Illumina reads
+
+   Canu for PacBio/MinION reads 
+
+2. Reads preprocessing for removing low quality base-calls and adapters
+
+   Trimmomatic (50 min/file) for Illumina reads
+
+3. Genome sequencing - DNA assembly
+
+   1. Short Illumina reads (Spades 2h/Canu 4,5 h)
+   2. Long PacBio RSII & NanoPore (MinION) reads (Spades 2h/Canu 4,5 h)
+
+4. Assembly evaluation (Quast 15 min/MUMmerplot 5 min/BCFtools 90 min)
+
+5. ​
+
+6. Alignment of the reads from transcriptome to the genome
+
+7. Comparison of transcriptome in rich medium and in human serum
+
+8. Tn-seq
+
 6. Gene Annotation
 
 ### Data organization
