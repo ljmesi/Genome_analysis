@@ -1,0 +1,12 @@
+PASS	Basic Statistics	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+PASS	Per base sequence quality	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+PASS	Per tile sequence quality	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+PASS	Per sequence quality scores	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+FAIL	Per base sequence content	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+FAIL	Per sequence GC content	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+PASS	Per base N content	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+PASS	Sequence Length Distribution	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+WARN	Sequence Duplication Levels	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+FAIL	Overrepresented sequences	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+FAIL	Adapter Content	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
+FAIL	Kmer Content	RNA-Seq_Serum_replicate_1_reverse.fastq.gz
