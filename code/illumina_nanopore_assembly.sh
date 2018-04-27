@@ -12,4 +12,4 @@ module load bioinfo-tools
 module load spades/3.11.1
 
 # Your commands
-spades.py --pe1-12 /home/lame5423/Genome_analysis/data/DNA/WGS_forward.fq.gz --pe2-12 /home/lame5423/Genome_analysis/data/DNA/WGS_reverse.fq.gz --nanopore /home/lame5423/Genome_analysis/data/DNA/NanoPore/E745_all.fasta.gz -o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/ -k 21
+spades.py --pe1-12 /home/lame5423/Genome_analysis/data/DNA//Illumina/WGS_forward.fq.gz --pe2-12 /home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_reverse.fq.gz --nanopore /home/lame5423/Genome_analysis/data/DNA/NanoPore/E745_all.fasta.gz -o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/ -k 21
