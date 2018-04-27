@@ -1,0 +1,2 @@
+/var/spool/slurmd/job2854560/slurm_script: line 15: syntax error near unexpected token `1'
+/var/spool/slurmd/job2854560/slurm_script: line 15: `spades.py --pe<1>-1 /home/lame5423/Genome_analysis/data/DNA/WGS_forward.fq.gz --pe<2>-2 /home/lame5423/Genome_analysis/data/DNA/WGS_reverse.fq.gz --nanopore /home/lame5423/Genome_analysis/data/DNA/NanoPore/E745_all.fasta.gz -o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/'

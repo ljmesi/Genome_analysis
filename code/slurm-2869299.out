@@ -1,0 +1,9 @@
+	trimmomatic 0.36 loaded, see 'module help trimmomatic/0.36' for more information.
+
+
+== Error ==  the output_dir is not set! It is a mandatory parameter (-o output_dir).
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+/var/spool/slurmd/job2869299/slurm_script: line 16: -o: command not found

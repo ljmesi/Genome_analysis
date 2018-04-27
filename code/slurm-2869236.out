@@ -1,0 +1,58 @@
+	trimmomatic 0.36 loaded, see 'module help trimmomatic/0.36' for more information.
+Command line: /sw/apps/bioinfo/spades/3.11.1/rackham/bin/spades.py	--pe1-12	/home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_forward.fq.gz	--pe2-12	/home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_reverse.fq.gz	--nanopore	/home/lame5423/Genome_analysis/data/DNA/NanoPore/E745_all.fasta.gz	-o	/home/lame5423/Genome_analysis/analyses/03_genome_assembly	-k	21	
+
+System information:
+  SPAdes version: 3.11.1
+  Python version: 2.7.5
+  OS: Linux-3.10.0-693.21.1.el7.x86_64-x86_64-with-centos-7.4.1708-Core
+
+Output dir: /home/lame5423/Genome_analysis/analyses/03_genome_assembly
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: ['/home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_forward.fq.gz']
+      single reads: not specified
+    Library number: 2, library type: paired-end
+      orientation: fr
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: ['/home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_reverse.fq.gz']
+      single reads: not specified
+    Library number: 3, library type: nanopore
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/home/lame5423/Genome_analysis/data/DNA/NanoPore/E745_all.fasta.gz']
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed (with gzip)
+Assembly parameters:
+  k: [21]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /home/lame5423/Genome_analysis/analyses/03_genome_assembly/tmp
+  Threads: 16
+  Memory limit (in Gb): 125
+
+
+======= SPAdes pipeline started. Log can be found here: /home/lame5423/Genome_analysis/analyses/03_genome_assembly/spades.log
+
+== Splitting /home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_forward.fq.gz into left and right reads (in /home/lame5423/Genome_analysis/analyses/03_genome_assembly/split_input directory)
+
+
+== Error ==  The number of reads in file with interlaced reads (/home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_forward.fq.gz) should be EVEN!
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
