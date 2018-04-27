@@ -5,7 +5,7 @@
 #SBATCH -t 07:00:00
 #SBATCH -J illumina_nanopore_assembly
 #SBATCH --mail-type=ALL
-#SBATCH --lauri.mesilaakso.5423@student.uu.se
+#SBATCH --mail-user lauri.mesilaakso.5423@student.uu.se
 
 # Load modules
 module load bioinfo-tools
