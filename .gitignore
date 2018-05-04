@@ -9,3 +9,5 @@
 *.jar
 *.rar
 *.tar
+/home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_log.txt	
+/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly
