@@ -1,7 +1,0 @@
-
-
-== Error ==  file not found: /home/lame5423/Genome_analysis/data/DNA/WGS_forward.fq.gz (interlaced reads, library number: 1, library type: paired-end)
-
-In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
-or report an issue on our GitHub repository github.com/ablab/spades
-Please provide us with params.txt and spades.log files from the output directory.
