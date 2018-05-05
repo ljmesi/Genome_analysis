@@ -1,0 +1,138 @@
+/sw/apps/bioinfo/quast/4.5.4/rackham/bin/quast.py -o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta -R /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta
+
+Version: 4.5.4
+
+System information:
+  OS: Linux-3.10.0-693.21.1.el7.x86_64-x86_64-with-centos-7.4.1708-Core (linux_64)
+  Python version: 2.7.6
+  CPUs number: 20
+
+Started: 2018-05-05 17:41:39
+
+Logging to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/quast.log
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used
+NOTICE: Maximum number of threads is set to 5 (use --threads option to set it manually)
+
+CWD: /pica/h1/lame5423/Genome_analysis/code
+Main parameters: 
+  Threads: 5, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta ==> efaecium_ref_genome
+
+Contigs:
+  Pre-processing...
+  /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta ==> efaecium.contigs
+
+2018-05-05 17:41:57
+Running Basic statistics processor...
+  Reference genome:
+    efaecium_ref_genome.fasta, length = 1753437, num fragments = 1, GC % = 37.94
+  Contig files: 
+    efaecium.contigs
+  Calculating N50 and L50...
+    efaecium.contigs, N50 = 2773588, L50 = 1, Total length = 3142355, GC % = 37.78, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/basic_stats/GC_content_plot.pdf
+  Drawing efaecium.contigs GC content plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/basic_stats/efaecium.contigs_GC_content_plot.pdf
+Done.
+
+2018-05-05 17:42:00
+Running Contig analyzer...
+  efaecium.contigs
+  Logging to files /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stdout and contigs_report_efaecium-contigs.stderr...
+  Aligning contigs to the reference
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/MUMmer/nucmer \
+  -c 65 -l 65 --maxmatch -p /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs \
+  --emem -t 5 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/quast_corrected_input/efaecium_ref_genome.fasta \
+  /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/quast_corrected_input/efaecium-contigs.fasta \
+  >> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stdout \
+  2>> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/MUMmer/delta-filter \
+  -i 95.0 -l 0 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.delta \
+  > /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.fdelta \
+  2> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/MUMmer/mummerplot \
+  --html --layout -p /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs \
+  /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.delta \
+  > /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stdout \
+  2> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/gnuplot/src/gnuplot \
+  /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.gp \
+  > /dev/null 2> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  MUMmer plot saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/efaecium-contigs_mummerplot.html
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/MUMmer/show-coords \
+  /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.delta \
+  > /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.coords_tmp \
+  2> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  /sw/apps/bioinfo/quast/4.5.4/rackham/lib/python2.7/site-packages/quast_libs/MUMmer/show-snps \
+  -S -T -H /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.delta \
+  < /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.coords.headless \
+  > /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.all_snps \
+  2> /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/contigs_report_efaecium-contigs.stderr
+  Analysis is finished.
+
+  Gzipping /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.all_snps to reduce disk space usage...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/nucmer_output/efaecium-contigs.all_snps.gz
+  Creating total report...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2018-05-05 17:42:14
+Running NA-NGA calculation...
+  efaecium.contigs, Largest alignment = 1183792, NA50 = 578258, NGA50 = 1183792, LA50 = 2, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/aligned_stats/NGAx_plot.pdf
+Done.
+
+2018-05-05 17:42:15
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  efaecium.contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2018-05-05 17:42:16
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2018-05-05 17:42:19
+RESULTS:
+  Text versions of total report are saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/report.html
+  PDF version (tables and plots) is saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/report.pdf
+  Icarus (contig browser) is saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/icarus.html
+  Log saved to /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/quast.log
+
+Finished: 2018-05-05 17:42:19
+Elapsed time: 0:00:39.525116
+NOTICEs: 5; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

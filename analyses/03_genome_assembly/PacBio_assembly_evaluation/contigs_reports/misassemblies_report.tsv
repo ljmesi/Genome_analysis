@@ -1,0 +1,14 @@
+Assembly	efaecium.contigs
+# misassemblies	32
+    # relocations	32
+    # translocations	0
+    # inversions	0
+# misassembled contigs	2
+Misassembled contigs length	2783322
+# local misassemblies	4
+# unaligned mis. contigs	1
+# mismatches	1
+# indels	87
+    # indels (<= 5 bp)	87
+    # indels (> 5 bp)	0
+Indels length	88
