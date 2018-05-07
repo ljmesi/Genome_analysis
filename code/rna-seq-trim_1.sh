@@ -11,7 +11,7 @@
 module load bioinfo-tools
 module load trimmomatic/0.36
 
-# Your commands
+# Your commands 
 java -jar /sw/apps/bioinfo/trimmomatic/0.36/rackham/trimmomatic-0.36.jar \
 PE -phred64 \
 -trimlog /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_log.txt \
