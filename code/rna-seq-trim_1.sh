@@ -21,4 +21,4 @@ PE -phred64 \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_unpaired_1.fg.gz \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_2.fg.gz \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_unpaired_2.fg.gz \
-ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:36
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:50
