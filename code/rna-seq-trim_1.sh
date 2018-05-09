@@ -13,7 +13,7 @@ module load trimmomatic/0.36
 
 # Your commands 
 java -jar /sw/apps/bioinfo/trimmomatic/0.36/rackham/trimmomatic-0.36.jar \
-PE -phred64 \
+PE \
 -trimlog /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_log.txt \
 /home/lame5423/Genome_analysis/data/RNA/RNA-Seq_Serum_replicate_1_forward.fastq.gz \
 /home/lame5423/Genome_analysis/data/RNA/RNA-Seq_Serum_replicate_1_reverse.fastq.gz \
