@@ -12,6 +12,6 @@ module load bioinfo-tools
 module load quast/4.5.4
 
 # Your commands
-quast.py -o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation \
-/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta \
--R /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta \
+quast.py /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta \
+-o /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly_evaluation/Quast_2 \
+-R /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta
