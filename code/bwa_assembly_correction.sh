@@ -12,7 +12,7 @@ module load bioinfo-tools
 module load bwa/0.7.17
 
 bwa index -p pacbio_index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta
-bwa mem /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/pacbio_index \
+bwa mem pacbio_index \
 /home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_forward.fq \
 /home/lame5423/Genome_analysis/data/DNA/Illumina/WGS_reverse.fq \
 > aln-pe.sam
