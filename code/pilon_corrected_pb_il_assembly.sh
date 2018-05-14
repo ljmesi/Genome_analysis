@@ -9,7 +9,7 @@
 
 # Load modules
 module load bioinfo-tools
-module load pilon/1.22
+module load Pilon/1.22
 
 java -Xmx16G -jar pilon --genome /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly/efaecium.contigs.fasta --frags \
 /home/lame5423/Genome_analysis/code/aln-pb.bam
