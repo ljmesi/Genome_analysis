@@ -3,7 +3,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 4:00:00
-#SBATCH -J bwa
+#SBATCH -J pilon
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user lauri.mesilaakso.5423@student.uu.se
 
