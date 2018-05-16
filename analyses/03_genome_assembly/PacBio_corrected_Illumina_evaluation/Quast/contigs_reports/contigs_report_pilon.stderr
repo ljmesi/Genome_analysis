@@ -1,0 +1,5 @@
+Writing filtered delta file /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.filter
+Reading delta file /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.delta
+Writing plot files /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.fplot, /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.rplot
+Writing gnuplot script /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.gp
+Rendering plot /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast/contigs_reports/nucmer_output/pilon.html
