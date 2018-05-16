@@ -12,9 +12,7 @@ module load bioinfo-tools
 module load bwa/0.7.17
 
 bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
-bwa mem rna_seq_index \
+bwa mem -t 2 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_1.fg.gz \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_2.fg.gz \
-/home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_unpaired_1.fg.gz \
-/home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_unpaired_2.fg.gz \
-> aln-rna_seq.sam
+| samtools sort -@ 2 -T tmp -O BAM -o name -
