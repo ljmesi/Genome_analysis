@@ -16,4 +16,4 @@ bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corr
 bwa mem -t 2 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_1.fg.gz \
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_2.fg.gz \
-| samtools sort -@ 2 -T tmp -O BAM -o RNA-Seq_Serum_replicate_1 -
+| samtools sort -@ 2 -T tmp -O BAM -o RNA-Seq_Serum_replicate_1.bam -
