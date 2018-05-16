@@ -16,4 +16,4 @@ bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corr
 bwa mem -t 2 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
 /proj/g2018003/nobackup/private/zhang_2017/RNA_trimmed_reads/trim_paired_ERR1797974_pass_1.fastq.gz \
 /proj/g2018003/nobackup/private/zhang_2017/RNA_trimmed_reads/trim_paired_ERR1797974_pass_2.fastq.gz \
-| samtools sort -@ 2 -T tmp -O BAM -o RNA-Seq_BHI_replicate_3.bam -
+| samtools sort -@ 2 -T tmp6 -O BAM -o RNA-Seq_BHI_replicate_3.bam -
