@@ -1,0 +1,16 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     pilon    efaecium.contigs
+# misassemblies              31       32              
+    # relocations            31       32              
+    # translocations         0        0               
+    # inversions             0        0               
+# misassembled contigs       2        2               
+Misassembled contigs length  2782003  2783322         
+# local misassemblies        4        4               
+# unaligned mis. contigs     1        1               
+# mismatches                 0        1               
+# indels                     5        87              
+    # indels (<= 5 bp)       5        87              
+    # indels (> 5 bp)        0        0               
+Indels length                5        88              
