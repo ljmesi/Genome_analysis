@@ -10,6 +10,7 @@
 # Load modules
 module load bioinfo-tools
 module load bwa/0.7.17
+module load samtools/1.6
 
 bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
 bwa mem -t 2 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
