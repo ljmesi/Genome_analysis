@@ -11,3 +11,11 @@
 *.tar
 /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_log.txt	
 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_assembly
+analyses/02_preprocessing/
+analyses/03_genome_assembly/Illumina_nanopore_assembly/
+analyses/03_genome_assembly/PacBio_assembly/
+code/aln-pb.bam
+code/aln-pb.sorted.bam
+code/aln-pb.sorted.bam.bai
+data/DNA/Illumina/
+
