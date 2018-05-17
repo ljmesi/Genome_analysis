@@ -7,8 +7,10 @@ res <- results(dds, name="condition_trt_vs_untrt")
 # or to shrink log fold changes association with condition:
 res <- lfcShrink(dds, coef="condition_trt_vs_untrt", type="apeglm")
 
-directory <- "/path/to/your/files/"
-sampleFiles <- grep("treated",list.files(directory),value=TRUE)
+directory <- "/home/john/pCloudDrive/Opiskelu/Genomianalyysi/Genome_analysis/analyses/06_rna-seq
+"
+#sampleFiles <- grep("treated",list.files(directory),value=TRUE)
+sampleFiles <- list.files(directory)
 sampleCondition <- sub("(.*treated).*","\\1",sampleFiles)
 sampleTable <- data.frame(sampleName = sampleFiles,
                           fileName = sampleFiles,
