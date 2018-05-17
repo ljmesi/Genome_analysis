@@ -1,0 +1,28 @@
+[bwa_index] Pack FASTA... 0.02 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.89 seconds elapse.
+[bwa_index] Update BWT... 0.03 sec
+[bwa_index] Pack forward-only FASTA... 0.02 sec
+[bwa_index] Construct SA from BWT and Occ... 0.26 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
+[main] Real time: 1.409 sec; CPU: 1.233 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 200870 sequences (20000084 bp)...
+[M::process] read 200884 sequences (20000022 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (47865, 0, 0, 46260)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (6, 16, 38)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 102)
+[M::mem_pestat] mean and std.dev: (23.62, 22.32)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 134)
+[M::mem_pestat] skip orientation FR as there are not enough pairs
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (7, 16, 35)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 91)
+[M::mem_pestat] mean and std.dev: (21.81, 19.90)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 119)
+[M::mem_process_seqs] Processed 200870 reads in 11.272 CPU sec, 5.805 real sec
+bwa: bntseq.c:428: bns_fetch_seq: Assertion `*beg <= mid && mid < *end' failed.
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...

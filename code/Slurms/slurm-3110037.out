@@ -1,0 +1,23 @@
+[bwa_index] Pack FASTA... 0.03 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.83 seconds elapse.
+[bwa_index] Update BWT... 0.04 sec
+[bwa_index] Pack forward-only FASTA... 0.02 sec
+[bwa_index] Construct SA from BWT and Occ... 0.41 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
+[main] Real time: 1.496 sec; CPU: 1.337 sec
+/var/spool/slurmd/job3110037/slurm_script: line 18: samtools: command not found
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 200822 sequences (20000062 bp)...
+[M::process] read 95766 sequences (9538038 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2, 96173, 7, 4)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (103, 124, 156)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 262)
+[M::mem_pestat] mean and std.dev: (130.82, 40.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 315)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 200822 reads in 8.285 CPU sec, 4.300 real sec

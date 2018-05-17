@@ -1,0 +1,11 @@
+[08:44:51] This is prokka 1.12
+[08:44:51] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[08:44:51] Homepage is https://github.com/tseemann/prokka
+[08:44:51] Local time is Thu May 17 08:44:51 2018
+[08:44:51] You are lame5423
+[08:44:51] Operating system is linux
+[08:44:51] You have BioPerl 1.007001
+[08:44:51] System has 20 cores.
+[08:44:51] Will use maximum of 8 cores.
+[08:44:51] Annotating as >>> Bacteria <<<
+[08:44:51] 'force/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta' is not a readable non-empty FASTA file

@@ -1,0 +1,13 @@
+[08:35:38] This is prokka 1.12
+[08:35:38] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[08:35:38] Homepage is https://github.com/tseemann/prokka
+[08:35:38] Local time is Thu May 17 08:35:37 2018
+[08:35:38] You are lame5423
+[08:35:38] Operating system is linux
+[08:35:38] You have BioPerl 1.007001
+[08:35:38] System has 20 cores.
+[08:35:38] Will use maximum of 8 cores.
+[08:35:38] Annotating as >>> Bacteria <<<
+[08:35:38] Generating locus_tag from '/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta' contents.
+[08:35:38] Setting --locustag KIGLMMPK from MD5 4205669483753aa27d4107e19b727c22
+[08:35:38] Folder '/pica/h1/lame5423/Genome_analysis/analyses/04_annotation/Prokka' already exists! Please change --outdir or use --force

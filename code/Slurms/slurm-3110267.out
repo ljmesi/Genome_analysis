@@ -1,0 +1,6 @@
+[bwa_index] Pack FASTA... 0.04 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.90 seconds elapse.
+[bwa_index] Update BWT... [bwt_restore_bwt] Failed to allocate 18446744073709551576 bytes at bwt.c line 452: Cannot allocate memory
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 200878 sequences (20000078 bp)...

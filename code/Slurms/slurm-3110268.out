@@ -1,0 +1,5 @@
+[bwa_index] Pack FASTA... 0.04 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.90 seconds elapse.
+[bwa_index] Update BWT... /var/spool/slurmd/job3110268/slurm_script: line 15: 14143 Segmentation fault      (core dumped) bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
+[fread] Unexpected end of file

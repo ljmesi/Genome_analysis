@@ -1,0 +1,36 @@
+[bwa_index] Pack FASTA... 0.05 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.82 seconds elapse.
+[bwa_index] Update BWT... 0.03 sec
+[bwa_index] Pack forward-only FASTA... 0.03 sec
+[bwa_index] Construct SA from BWT and Occ... 0.41 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta
+[main] Real time: 1.522 sec; CPU: 1.349 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 200822 sequences (20000062 bp)...
+[M::process] read 95766 sequences (9538038 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2, 96173, 7, 4)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (103, 124, 156)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 262)
+[M::mem_pestat] mean and std.dev: (130.82, 40.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 315)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 200822 reads in 8.083 CPU sec, 4.177 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (3, 45888, 0, 1)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (103, 124, 156)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 262)
+[M::mem_pestat] mean and std.dev: (130.79, 39.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 315)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 95766 reads in 3.899 CPU sec, 2.098 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 2 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_1.fg.gz /home/lame5423/Genome_analysis/analyses/02_preprocessing/RNA-Seq_trim_paired_2.fg.gz
+[main] Real time: 7.077 sec; CPU: 12.652 sec
+[bam_sort_core] merging from 0 files and 2 in-memory blocks...
