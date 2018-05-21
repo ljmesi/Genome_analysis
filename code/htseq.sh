@@ -11,7 +11,7 @@
 module load bioinfo-tools
 module load htseq/0.9.1
 
-htseq-count -f bam -t CDS -i ID\
+htseq-count -f bam -t CDS -i ID \
 /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam \
 /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam \
 /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam \
