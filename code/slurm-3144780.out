@@ -1,3 +1,0 @@
-Error occured when processing GFF file (line 10 of file /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff):
-  Feature KIGLMMPK_00001 does not contain a 'ID/home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam' attribute
-  [Exception type: ValueError, raised in count.py:77]
