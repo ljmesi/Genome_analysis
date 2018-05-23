@@ -18,5 +18,5 @@ code/aln-pb.bam
 code/aln-pb.sorted.bam
 code/aln-pb.sorted.bam.bai
 data/DNA/Illumina/
-analyses/05_rna_seq/
+analyses/05_rna_seq/*.bam
 /code/.Rhistory
