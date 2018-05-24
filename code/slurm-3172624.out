@@ -1,0 +1,5 @@
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Can't open file '/h1/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta'
+/var/spool/slurmd/job3172624/slurm_script: line 16:  8254 Aborted                 (core dumped) mummer -mum /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta /h1/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta > matches_assembly_corrected.mummer
+gnuplot 4.6 patchlevel 2
+ERROR: Could not read matches_assembly_corrected.mummer, File is empty
