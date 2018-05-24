@@ -1,12 +1,15 @@
 set terminal png tiny size 800,800
 set output "out.png"
+set ytics ( \
+ "" 0 \
+)
 set size 1,1
 set grid
 unset key
 set border 0
 set tics scale 0
 set xlabel "REF"
-set ylabel "tig00000001_pilon"
+set ylabel "QRY"
 set format "%.0f"
 set mouse format "%.0f"
 set mouse mouseformat "[%.0f, %.0f]"
