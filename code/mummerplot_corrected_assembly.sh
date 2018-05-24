@@ -11,7 +11,7 @@
 module load bioinfo-tools
 module load MUMmer/3.9.4alpha
 
-mummer -mum /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta \
+mummer -mum -b /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta \
 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
 > matches_assembly_corrected.mummer
 mummerplot -t png matches_assembly_corrected.mummer
