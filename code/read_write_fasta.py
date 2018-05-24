@@ -2,7 +2,7 @@
 # Naming the first fasta file
 fileNumber = 1
 # Open the file
-with open("pilon.fasta") as f:
+with open("efaecium.contigs.fasta") as f:
     # Open file handle for first file
     file = open(str(fileNumber)+".fasta", "w")
     # Read and write the first line of the first sequence
