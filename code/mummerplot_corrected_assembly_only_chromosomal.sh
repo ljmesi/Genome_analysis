@@ -3,7 +3,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 0:10:00
-#SBATCH -J mummerplot_corrected_assembly_full_genome
+#SBATCH -J mummerplot_corrected_assembly_only_chromosomal
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user lauri.mesilaakso.5423@student.uu.se
 
@@ -12,6 +12,6 @@ module load bioinfo-tools
 module load MUMmer/3.9.4alpha
 
 mummer -mum -b /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta \
-/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/pilon.fasta \
+/home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/1.fasta \
 > matches_assembly_corrected.mummer
-mummerplot -t png -p matches_assembly_corrected_full_genome  matches_assembly_corrected.mummer
+mummerplot -t png -p matches_assembly_corrected_only_chromosomal  matches_assembly_corrected.mummer

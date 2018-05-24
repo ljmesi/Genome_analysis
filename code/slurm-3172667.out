@@ -1,0 +1,5 @@
+gnuplot 4.6 patchlevel 2
+Reading mummer file matches_assembly_corrected.mummer (use mummer -c)
+Writing plot files matches_assembly_corrected_only_chromosomal.fplot, matches_assembly_corrected_only_chromosomal.rplot
+Writing gnuplot script matches_assembly_corrected_only_chromosomal.gp
+Rendering plot matches_assembly_corrected_only_chromosomal.png
