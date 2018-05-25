@@ -28,7 +28,7 @@ rld <- rlog(dds, blind=FALSE)
 source("http://bioconductor.org/biocLite.R") 
 biocLite("pheatmap") 
 library("pheatmap") 
-select <- order(rowMeans(counts(dds,normalized=TRUE)), decreasing=TRUE)[1:20]
+select <- order(rowMeans(counts(dds,normalized=TRUE)), decreasing=TRUE)[1:30]
 
 pheatmap(assay(rld)[select,], cluster_rows=TRUE, show_rownames=TRUE,
          cluster_cols=TRUE)
