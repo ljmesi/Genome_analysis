@@ -1,0 +1,6 @@
+gnuplot 4.6 patchlevel 2
+Reading mummer file matches_assembly_corrected.mummer (use mummer -c)
+Writing plot files matches_assembly_corrected_all.fplot, matches_assembly_corrected_all.rplot
+WARNING: Multiple qry sequences overlaid, try -Q, -q or -c
+Writing gnuplot script matches_assembly_corrected_all.gp
+Rendering plot matches_assembly_corrected_all.png

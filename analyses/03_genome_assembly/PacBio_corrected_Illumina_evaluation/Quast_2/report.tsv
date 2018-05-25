@@ -1,0 +1,49 @@
+Assembly	pilon	efaecium.contigs
+# contigs (>= 0 bp)	8	8
+# contigs (>= 1000 bp)	8	8
+# contigs (>= 5000 bp)	8	8
+# contigs (>= 10000 bp)	7	7
+# contigs (>= 25000 bp)	5	5
+# contigs (>= 50000 bp)	2	2
+Total length (>= 0 bp)	3141050	3142355
+Total length (>= 1000 bp)	3141050	3142355
+Total length (>= 5000 bp)	3141050	3142355
+Total length (>= 10000 bp)	3132750	3132621
+Total length (>= 25000 bp)	3103593	3103475
+Total length (>= 50000 bp)	2992680	2992580
+# contigs	8	8
+Largest contig	2773703	2773588
+Total length	3141050	3142355
+Reference length	2765010	2765010
+GC (%)	37.78	37.78
+Reference GC (%)	38.11	38.11
+N50	2773703	2773588
+NG50	2773703	2773588
+N75	2773703	2773588
+NG75	2773703	2773588
+L50	1	1
+LG50	1	1
+L75	1	1
+LG75	1	1
+# misassemblies	3	4
+# misassembled contigs	2	2
+Misassembled contigs length	2782003	2783322
+# local misassemblies	0	0
+# unaligned mis. contigs	1	1
+# unaligned contigs	4 + 3 part	4 + 3 part
+Unaligned length	322065	322051
+Genome fraction (%)	100.000	100.000
+Duplication ratio	1.020	1.020
+# N's per 100 kbp	0.00	0.00
+# mismatches per 100 kbp	0.00	0.04
+# indels per 100 kbp	0.22	4.38
+Largest alignment	2195417	2195330
+Total aligned length	2818986	2820305
+NA50	2195417	2195330
+NGA50	2195417	2195330
+NA75	578286	578258
+NGA75	2195417	2195330
+LA50	1	1
+LGA50	1	1
+LA75	2	2
+LGA75	1	1

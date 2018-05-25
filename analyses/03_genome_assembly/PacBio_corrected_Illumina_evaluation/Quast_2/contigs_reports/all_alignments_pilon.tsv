@@ -1,0 +1,78 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+1	578289	578286	1	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000001_pilon	99.99		True
+relocation, inconsistency = -8697 [linear representation of circular genome]
+569593	2765010	2773703	578287	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000001_pilon	99.99		True
+CONTIG	tig00000001_pilon	2773703	misassembled
+978733	979072	30337	30675	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000021_pilon	97.94		True
+CONTIG	tig00000021_pilon	40017	correct_unaligned
+CONTIG	tig00000022_pilon	44609	unaligned
+CONTIG	tig00000027_pilon	17168	unaligned
+CONTIG	tig00000029_pilon	26287	unaligned
+CONTIG	tig00000031_pilon	11989	unaligned
+2357313	2358819	32119	33625	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.93		True
+unknown
+126576	127643	35980	37047	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.44		True
+unknown
+1347104	1348447	38437	39781	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.93		True
+unknown
+1833128	1833833	40457	41162	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.58		True
+unknown
+260429	261747	42495	41176	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.55		True
+unknown
+284713	285799	47885	46800	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.17		True
+unknown
+2327160	2328204	49869	50913	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.62		True
+unknown
+2255020	2256385	56284	57649	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.34		True
+unknown
+2255019	2256385	58899	60265	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.63		True
+unknown
+2206636	2208909	66260	63988	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.96		True
+unknown
+2506044	2507559	67775	66260	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.87		True
+unknown
+2215960	2217495	68098	69633	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.54		True
+unknown
+1254901	1256291	79099	77709	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.64		True
+unknown
+1254901	1256295	95719	97113	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	98.06		True
+unknown
+83567	84914	100604	99256	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.41		True
+unknown
+1125161	1126679	104532	103014	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.93		True
+unknown
+1079205	1080633	107677	106248	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.72		True
+unknown
+250460	251829	109168	107799	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.71		True
+unknown
+944075	945441	121112	119747	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.85		True
+unknown
+1763035	1764117	128067	126985	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.63		True
+unknown
+944076	945443	134236	132870	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.93		True
+unknown
+1244026	1245825	136891	135091	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.89		True
+unknown
+209712	211402	142326	140635	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.7		True
+unknown
+423214	424088	144119	144992	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	98.51		True
+unknown
+119629	120954	151124	149799	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.85		True
+unknown
+1347105	1348454	165134	163785	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.7		True
+unknown
+1301034	1302117	166760	165676	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.26		True
+unknown
+2098284	2100079	179339	181134	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.94		True
+unknown
+1807480	1808994	216727	218241	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.87		True
+unknown
+1807556	1808291	218242	218977	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000479_pilon	99.73		True
+unknown
+CONTIG	tig00000479_pilon	218977	mis_unaligned
+1223632	1225145	3608	5122	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000480_pilon	99.87		True
+relocation, inconsistency = 364470
+1589616	1591055	5123	6562	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000480_pilon	99.65		True
+relocation, inconsistency = 766353
+2357409	2358817	6563	7971	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome.	tig00000480_pilon	99.79		True
+CONTIG	tig00000480_pilon	8300	misassembled

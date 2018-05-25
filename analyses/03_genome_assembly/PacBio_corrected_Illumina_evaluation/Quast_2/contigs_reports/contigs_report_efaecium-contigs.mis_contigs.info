@@ -1,0 +1,6 @@
+tig00000001_len_2773588_reads_11559_covStat_3810.43_gappedBases_no_class_contig_suggestRepeat_no_suggestCircular_yes
+Extensive misassembly (relocation, inconsistency = -8697 [linear representation of circular genome]) between 578258 1 and 2773588 578259
+tig00000480_len_9734_reads_1_covStat_0.00_gappedBases_no_class_contig_suggestRepeat_no_suggestCircular_no
+Extensive misassembly (relocation, inconsistency = -1440) between 3607 5120 and 5121 6558
+Extensive misassembly (relocation, inconsistency = 364470) between 5121 6558 and 6559 7998
+Extensive misassembly (relocation, inconsistency = 766353) between 6559 7998 and 7999 9405
