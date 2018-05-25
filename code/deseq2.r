@@ -28,7 +28,12 @@ rld <- rlog(dds, blind=FALSE)
 source("http://bioconductor.org/biocLite.R") 
 biocLite("pheatmap") 
 library("pheatmap") 
-select <- order(rowMeans(counts(dds,normalized=TRUE)), decreasing=TRUE)[1:30]
 
-pheatmap(assay(rld)[select,], cluster_rows=TRUE, show_rownames=TRUE,
-         cluster_cols=TRUE)
+mat = assay(rld)[ head(order(res$padj),15), ] # select the top 30 genes with the lowest padj
+mat = mat - rowMeans(mat) # Subtract the row means from each value
+# Optional, but to make the plot nicer:
+df = as.data.frame(colData(rld)[,c("condition")]) # Create a dataframe with a column of the conditions
+colnames(df) = "condition" # Rename the column header
+rownames(df) = colnames(mat) # add rownames
+# and plot the actual heatmap
+pheatmap(mat, annotation_col=df)
