@@ -1,14 +1,14 @@
 Assembly	pilon	efaecium.contigs
-# misassemblies	31	32
-    # relocations	31	32
+# misassemblies	3	4
+    # relocations	3	4
     # translocations	0	0
     # inversions	0	0
 # misassembled contigs	2	2
 Misassembled contigs length	2782003	2783322
-# local misassemblies	4	4
+# local misassemblies	0	0
 # unaligned mis. contigs	1	1
 # mismatches	0	1
-# indels	5	87
-    # indels (<= 5 bp)	5	87
+# indels	6	121
+    # indels (<= 5 bp)	6	121
     # indels (> 5 bp)	0	0
-Indels length	5	88
+Indels length	6	123

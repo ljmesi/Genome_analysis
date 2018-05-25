@@ -1,6 +1,6 @@
 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_1/quast_corrected_input/efaecium_ref_genome.fasta /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_1/quast_corrected_input/efaecium-contigs.fasta
 NUCMER
->ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. tig00000001_len_2773588_reads_11559_covStat_3810.43_gappedBases_no_class_contig_suggestRepeat_no_suggestCircular_yes 1753437 2773588
+>ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. tig00000001_len_2773588_reads_11559_covStat_3810.43_gappedBases_no_class_contig_suggestRepeat_no_suggestCircular_yes 2765010 2773588
 1 578289 578258 1 35 35 0
 128655
 46309
@@ -38,7 +38,7 @@ NUCMER
 328
 195
 0
-569593 1753437 2773588 1589797 68 68 0
+569593 2765010 2773588 578259 111 111 0
 96977
 9590
 -4886
@@ -106,4 +106,47 @@ NUCMER
 849
 -6031
 10296
+1394
+104676
+3946
+36459
+192809
+90997
+18477
+22083
+255
+1
+3359
+1709
+3913
+7
+440
+33747
+23854
+10573
+55343
+7181
+114
+307
+1860
+3149
+-1045
+-1
+-1
+63577
+71018
+-6
+4
+3
+1
+153775
+16082
+2895
+2459
+1759
+128
+1578
+2929
+343
+73789
 0

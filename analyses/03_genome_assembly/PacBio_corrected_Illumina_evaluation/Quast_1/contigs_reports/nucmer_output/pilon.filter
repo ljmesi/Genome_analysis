@@ -1,6 +1,6 @@
 /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_1/quast_corrected_input/efaecium_ref_genome.fasta /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_1/quast_corrected_input/pilon.fasta
 NUCMER
->ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. tig00000001_pilon 1753437 2773703
+>ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. tig00000001_pilon 2765010 2773703
 1 578289 578286 1 5 5 0
 531509
 44716
@@ -8,7 +8,12 @@ NUCMER
 328
 195
 0
-569593 1753437 2773703 1589857 2 2 0
+569593 2765010 2773703 578287 7 7 0
 -672224
 -103495
+1159562
+-6
+4
+3
+1
 0

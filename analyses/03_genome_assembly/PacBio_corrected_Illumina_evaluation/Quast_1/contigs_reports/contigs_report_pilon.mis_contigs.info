@@ -1,33 +1,5 @@
 tig00000001_pilon
-Extensive misassembly (relocation, inconsistency = 342117) between 578286 1 and 596190 601646
-Extensive misassembly (relocation, inconsistency = 141031) between 596190 601646 and 656616 654979
-Extensive misassembly (relocation, inconsistency = 27480) between 656616 654979 and 824658 826186
-Extensive misassembly (relocation, inconsistency = -398765) between 824658 826186 and 826437 828490
-Extensive misassembly (relocation, inconsistency = 177659) between 828593 831997 and 835731 837260
-Extensive misassembly (relocation, inconsistency = -809975) between 835731 837260 and 922671 928131
-Extensive misassembly (relocation, inconsistency = 789461) between 922671 928131 and 985984 984479
-Extensive misassembly (relocation, inconsistency = 1100565) between 985984 984479 and 1016148 1015088
-Extensive misassembly (relocation, inconsistency = 1232869) between 1016148 1015088 and 1033133 1034224
-Extensive misassembly (relocation, inconsistency = -638292) between 1033133 1034224 and 1052731 1054312
-Extensive misassembly (relocation, inconsistency = 628320) between 1052731 1054312 and 1056931 1057523
-Extensive misassembly (relocation, inconsistency = -629243) between 1056931 1057523 and 1058347 1060727
-Extensive misassembly (relocation, inconsistency = 626087) between 1058347 1060727 and 1078345 1084791
-Extensive misassembly (relocation, inconsistency = -628850) between 1078345 1083871 and 1083872 1090584
-Extensive misassembly (relocation, inconsistency = 632828) between 1083872 1090584 and 1113522 1112456
-Extensive misassembly (relocation, inconsistency = -1253321) between 1113522 1112456 and 1127338 1125795
-Extensive misassembly (relocation, inconsistency = 39383) between 1127338 1125795 and 1134384 1136731
-Extensive misassembly (relocation, inconsistency = -123415) between 1180611 1182124 and 1193512 1195014
-Extensive misassembly (relocation, inconsistency = -33924) between 1193512 1195014 and 1197669 1199183
-Extensive misassembly (relocation, inconsistency = -301099) between 1197669 1199183 and 1213723 1215493
-Extensive misassembly (relocation, inconsistency = 13467) between 1215596 1219075 and 1240816 1239738
-Extensive misassembly (relocation, inconsistency = 262584) between 1240816 1239738 and 1243211 1245008
-Extensive misassembly (relocation, inconsistency = 34477) between 1243211 1245008 and 1300007 1301520
-Extensive misassembly (relocation, inconsistency = -741953) between 1380844 1382182 and 1482075 1483591
-Extensive misassembly (relocation, inconsistency = 622289) between 1482075 1483591 and 1510158 1509080
-Extensive misassembly (relocation, inconsistency = 503929) between 1510158 1509080 and 1523970 1525042
-Extensive misassembly (relocation, inconsistency = 567906) between 1523970 1525042 and 1535814 1534301
-Extensive misassembly (relocation, inconsistency = 336626) between 1535814 1534301 and 1579184 1580260
-Extensive misassembly (relocation, inconsistency = -157893) between 1579184 1580260 and 2773703 1589857
+Extensive misassembly (relocation, inconsistency = -8697 [linear representation of circular genome]) between 578286 1 and 2773703 578287
 tig00000480_pilon
-Extensive misassembly (relocation, inconsistency = -1440) between 3608 5122 and 5123 6562
-Extensive misassembly (relocation, inconsistency = 28348) between 5123 6562 and 6563 7969
+Extensive misassembly (relocation, inconsistency = 364470) between 3608 5122 and 5123 6562
+Extensive misassembly (relocation, inconsistency = 766353) between 5123 6562 and 6563 7971

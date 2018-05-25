@@ -1,7 +1,7 @@
 reference chromosomes:
-	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. (total length: 1753437 bp, maximal covered length: 1753437 bp)
+	ENA_CP014529_CP014529.1_Enterococcus_faecium_strain_E745__complete_genome. (total length: 2765010 bp, maximal covered length: 2765010 bp)
 
-total genome size: 1753437
+total genome size: 2765010
 
 gap min size: 50
 partial gene/operon min size: 100
@@ -11,5 +11,5 @@ partial gene/operon min size: 100
 assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
                          | fraction  | ratio       | number    |           | genes     |           | operons   |
 ========================================================================================================================
-pilon                    | 100.00000%| 1.06972     | 0         | -         | -         | -         | -         |
-efaecium-contigs         | 100.00000%| 1.07049     | 0         | -         | -         | -         | -         |
+pilon                    | 100.00000%| 1.01952     | 0         | -         | -         | -         | -         |
+efaecium-contigs         | 100.00000%| 1.02000     | 0         | -         | -         | -         | -         |
