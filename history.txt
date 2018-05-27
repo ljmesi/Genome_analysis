@@ -1,1000 +1,1000 @@
-   20  cd Prokka/
-   21  git add --all .
-   22  git commit -m "Results from Prokka and slurms"
-   23  git push
-   24  git status
-   25  git rm ../Empty.txt
-   26  git status
-   27  git rm ../../../code/slurm*
-   28  git status
+    8  mv slurm-312* Slurms/
+    9  ll
+   10  nano slurm-3121279.out 
+   11  ll
+   12  nano slurm-31212
+   13  nano slurm-3121284.out 
+   14  ll
+   15  git status
+   16  ll
+   17  cd ..
+   18  ll
+   19  cd analyses/
+   20  ll
+   21  cd 05_rna_seq/
+   22  ll
+   23  cd ..
+   24  cd 05_synteny/
+   25  ll
+   26  rm *
+   27  cd ..
+   28  cd 05_synteny/
    29  ll
-   30  git commit -m "Removed some slurms and empty file."
-   31  git push
-   32  git pull
-   33  ll
-   34  git pull
-   35  cd ..
-   36  ll
-   37  cd ..
-   38  ll
-   39  cd 02_preprocessing/
-   40  ll
-   41  cd ..
-   42  cd 03_genome_assembly/
-   43  ll
+   30  rm -r FUCW6KP8114-Alignment.json/
+   31  ll
+   32  cd ..
+   33  rm 05_synteny/
+   34  rmdir 05_synteny/
+   35  mkdir 06_synteny
+   36  cd 06_synteny/
+   37  ll
+   38  cd ..
+   39  ll
+   40  cd ..
+   41  cd code/
+   42  ll
+   43  nano slurm-3121284.out 
    44  cd ..
    45  ll
-   46  cd 02_preprocessing/
-   47  ll
-   48  ls -ll
-   49  module spider act
-   50  module spider artemis
-   51  cd Genome_analysis/
-   52  cd code/
-   53  git pull
-   54  git status
-   55  module spider htseq
+   46  cd data/
+   47  cd ..
+   48  cd analyses/06_synteny/
+   49  ll
+   50  cd ..
+   51  rmdir 06_synteny/
+   52  git pull
+   53  cd ..
+   54  cd code/
+   55  ll
    56  cd ..
    57  cd data/
    58  ll
-   59  cd RNAll
-   60  ll
-   61  cd RNA/
-   62  ll
+   59  cd DNA/
+   60  cd RefGenome/
+   61  ll
+   62  pwd
    63  cd ..
-   64  ll
-   65  cd analyses/
-   66  ll
-   67  mkdir 05_rna_seq
-   68  cd 05_rna_seq/
-   69  ll
-   70  pwd
-   71  cd ..
-   72  cd code/
-   73  ll
-   74  mv RNA-Seq_* /home/lame5423/Genome_analysis/analyses/05_rna_seq/
-   75  ll
-   76  git status
-   77  git add core*
-   78  git status
-   79  cd ..
-   80  cd analyses/05_rna_seq/
-   81  ll
-   82  cd ..
+   64  cd analyses/
+   65  ll
+   66  mkdir 06
+   67  cd 06
+   68  ll
+   69  ln -s /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta 
+   70  ll
+   71  mv ../../code/sequence.fasta 
+   72  mv ../../code/sequence.fasta .
+   73  mv sequence.fasta Enterococcus_casseliflavus_ec20.fasta
+   74  ll
+   75  module load blast
+   76  module load bioinfo-tools
+   77  module load blast
+   78  history | grep "salloc"
+   79  module load bioinfo-tools
+   80  module load blast
+   81  module unload blast/2.6.0+ 
+   82  module load blast/2.2.26 
    83  ll
-   84  cd 04_annotation/
-   85  cd Prokka/
-   86  ll
-   87  pwd
-   88  git pull
-   89  git status
-   90  cd ../../03_genome_assembly/PacBio_corrected_Illumina/
-   91  ll
-   92  git add --all .
-   93  git status
-   94  git commit -m "pilon output files and core files."
-   95  git push
-   96  cd ..
-   97  cd code/
-   98  ll
-   99  sbatch htseq.sh 
-  100  nano htseq.sh 
-  101  sbatch htseq.sh 
-  102  cd Genome_analysis/
-  103  git pull
-  104  cd code/
-  105  ll
-  106  sbatch htseq1.sh 
-  107  sbatch htseq2.sh 
-  108  sbatch htseq3.sh 
-  109  sbatch htseq4.sh 
-  110  sbatch htseq5.sh 
-  111  sbatch htseq6.sh 
-  112  ll
-  113  git status
-  114  cd ..
-  115  cd analyses/
-  116  cd 05_rna_seq/
-  117  ll
-  118  cd ..
-  119  ll
-  120  cd code/
+   84  blastall
+   85  ll
+   86  formatdb -i efaecium_ref_genome.fasta -p F
+   87  ll
+   88  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -m 8
+   89  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
+   90  ll
+   91  less alignment_efaecium_e_casseliflavus_e20 
+   92  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20____ -p blastn
+   93  ll
+   94  less alignment_efaecium_e_casseliflavus_e20____ 
+   95  rm alignment_efaecium_e_casseliflavus_e20____ 
+   96  ll
+   97  history
+   98  git pull
+   99  git status
+  100  git rm ../05_synteny/FUCW6KP8114-Alignment.json/FUCW6KP8114.json
+  101  git rm ../05_synteny/FUCW6KP8114-Alignment.json/FUCW6KP8114_1.json
+  102  git rm ../05_synteny/FUCW6KP8114-Alignment.sam
+  103  git rm ../../code/sequence.fasta
+  104  cd ../../code/
+  105  nano htseq.sh 
+  106  sbatch htseq.sh 
+  107  ll
+  108  git status
+  109  git add htseq.sh
+  110  cd ../analyses/06/
+  111  ll
+  112  cd ..
+  113  ll
+  114  git commit -m "Edited the orgasation of the files."
+  115  git push
+  116  git status
+  117  git pull
+  118  ll
+  119  mkdir 06_synteny
+  120  cd 06
   121  ll
-  122  nano slurm-3121020.out 
-  123  mv slurm-312* Slurms/
-  124  ll
-  125  nano slurm-3121279.out 
-  126  ll
-  127  nano slurm-31212
-  128  nano slurm-3121284.out 
-  129  ll
-  130  git status
-  131  ll
-  132  cd ..
-  133  ll
-  134  cd analyses/
-  135  ll
-  136  cd 05_rna_seq/
-  137  ll
-  138  cd ..
-  139  cd 05_synteny/
-  140  ll
-  141  rm *
-  142  cd ..
-  143  cd 05_synteny/
-  144  ll
-  145  rm -r FUCW6KP8114-Alignment.json/
-  146  ll
-  147  cd ..
-  148  rm 05_synteny/
-  149  rmdir 05_synteny/
-  150  mkdir 06_synteny
-  151  cd 06_synteny/
-  152  ll
-  153  cd ..
-  154  ll
-  155  cd ..
-  156  cd code/
-  157  ll
-  158  nano slurm-3121284.out 
-  159  cd ..
-  160  ll
-  161  cd data/
-  162  cd ..
-  163  cd analyses/06_synteny/
-  164  ll
-  165  cd ..
-  166  rmdir 06_synteny/
-  167  git pull
-  168  cd ..
-  169  cd code/
+  122  mv * ../06_synteny/
+  123  ll
+  124  cd ..
+  125  ll
+  126  cd 06_synteny/
+  127  ll
+  128  cd ..
+  129  rmdir 06
+  130  ll
+  131  git status
+  132  git add 06_synteny/
+  133  cd ../code/
+  134  ll
+  135  git pull
+  136  git status
+  137  mv slurm-3121* Slurms/
+  138  git status
+  139  git add Slurms/*
+  140  git status
+  141  git commit -m "Blast results for use with synteny comparison."
+  142  git push
+  143  git status
+  144  nano ../.gitignore 
+  145  git status
+  146  nano ../.gitignore 
+  147  git status
+  148  git add Slurms/slurm-3121480.out
+  149  git add ../.gitignore
+  150  ll
+  151  git status
+  152  git commit -m "Updated .gitignore."
+  153  git push
+  154  git status
+  155  git add Slurms/slurm-3121480.out
+  156  git status
+  157  cd ..
+  158  cd analyses/
+  159  ll
+  160  cd 06_synteny/
+  161  ll
+  162  git pull
+  163  cd ..
+  164  lls
+  165  ll
+  166  cd code/
+  167  ll
+  168  git status
+  169  cd ..
   170  ll
-  171  cd ..
-  172  cd data/
-  173  ll
-  174  cd DNA/
-  175  cd RefGenome/
+  171  cd data/
+  172  cd ..
+  173  cd analyses/
+  174  ll
+  175  cd 05_rna_seq/
   176  ll
-  177  pwd
-  178  cd ..
-  179  cd analyses/
+  177  cd ..
+  178  ll
+  179  cd ..
   180  ll
-  181  mkdir 06
-  182  cd 06
-  183  ll
-  184  ln -s /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta 
-  185  ll
-  186  mv ../../code/sequence.fasta 
-  187  mv ../../code/sequence.fasta .
-  188  mv sequence.fasta Enterococcus_casseliflavus_ec20.fasta
-  189  ll
-  190  module load blast
-  191  module load bioinfo-tools
-  192  module load blast
-  193  history | grep "salloc"
-  194  module load bioinfo-tools
-  195  module load blast
-  196  module unload blast/2.6.0+ 
-  197  module load blast/2.2.26 
-  198  ll
-  199  blastall
+  181  cd code/
+  182  ll
+  183  cd Slurms/
+  184  ll
+  185  nano slurm-3121480.out 
+  186  cd ..
+  187  ll
+  188  cd ..
+  189  cd analyses/03_genome_assembly/
+  190  ll
+  191  cd PacBio_corrected_Illumina
+  192  ll
+  193  pwd
+  194  module load mummer
+  195  module spider
+  196                  
+  197  module spider mummer
+  198  module load MUMmer/3.9.4alpha 
+  199  mummer -mum /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/1.fasta > matches_assembly_corrected.mummer
   200  ll
-  201  formatdb -i efaecium_ref_genome.fasta -p F
+  201  cd ..
   202  ll
-  203  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -m 8
-  204  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
-  205  ll
-  206  less alignment_efaecium_e_casseliflavus_e20 
-  207  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20____ -p blastn
+  203  cd PacBio_corrected_Illumina_evaluation/
+  204  ll
+  205  mkdir Mummer
+  206  cd Mummer/
+  207  mv ../../PacBio_corrected_Illumina/matches_assembly_corrected.mummer .
   208  ll
-  209  less alignment_efaecium_e_casseliflavus_e20____ 
-  210  rm alignment_efaecium_e_casseliflavus_e20____ 
-  211  ll
-  212  history
-  213  git pull
-  214  git status
-  215  git rm ../05_synteny/FUCW6KP8114-Alignment.json/FUCW6KP8114.json
-  216  git rm ../05_synteny/FUCW6KP8114-Alignment.json/FUCW6KP8114_1.json
-  217  git rm ../05_synteny/FUCW6KP8114-Alignment.sam
-  218  git rm ../../code/sequence.fasta
-  219  cd ../../code/
-  220  nano htseq.sh 
-  221  sbatch htseq.sh 
-  222  ll
-  223  git status
-  224  git add htseq.sh
-  225  cd ../analyses/06/
-  226  ll
-  227  cd ..
-  228  ll
-  229  git commit -m "Edited the orgasation of the files."
-  230  git push
-  231  git status
-  232  git pull
-  233  ll
-  234  mkdir 06_synteny
-  235  cd 06
-  236  ll
-  237  mv * ../06_synteny/
+  209  mummerplot -png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  210  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  211  mummerplot -h
+  212  mummerplot --png new_corrected_assembly.png matches_assembly_corrected.mummer
+  213  mummerplot -t png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  214  mummerplot -t "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  215  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  216  module load mummerplot
+  217  module spider MUMmerplot
+  218  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  219  ll
+  220  cd ..
+  221  ll
+  222  cd 06_synteny/
+  223  ll
+  224  mv Enterococcus\ _faecalis\ _V583_ref_genome.fna 
+  225  blastall -i Enterococcus_casseliflavus_ec20.fasta Enterococcus\ _faecalis\ _V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20_e_faecalis_v583 -p blastn -m 8
+  226  mv Enterococcus\ _faecalis\ _V583_ref_genome.fna Enterococcus_faecalis_V583_ref_genome.fna 
+  227  ll
+  228  blastall -i Enterococcus_casseliflavus_ec20.fasta Enterococcus_faecalis_V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20_e_faecalis_v583 -p blastn -m 8
+  229  cd ..
+  230  ll
+  231  cd 03_genome_assembly/
+  232  ll
+  233  cd PacBio_corrected_Illumina_evaluation/
+  234  cd Mummer/
+  235  ll
+  236  history
+  237  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
   238  ll
-  239  cd ..
-  240  ll
-  241  cd 06_synteny/
-  242  ll
-  243  cd ..
-  244  rmdir 06
-  245  ll
-  246  git status
-  247  git add 06_synteny/
-  248  cd ../code/
-  249  ll
-  250  git pull
-  251  git status
-  252  mv slurm-3121* Slurms/
-  253  git status
-  254  git add Slurms/*
-  255  git status
-  256  git commit -m "Blast results for use with synteny comparison."
-  257  git push
-  258  git status
-  259  nano ../.gitignore 
-  260  git status
-  261  nano ../.gitignore 
+  239  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  240  mummerplot -png "new_corrected_assembly.png" matches_assembly_corrected.mummer
+  241  mummerplot -h
+  242  mummerplot --png matches_assembly_corrected.mummer
+  243  ll
+  244  git status
+  245  git add --all .
+  246  ll
+  247  git commit -m "Mummerplot on the new assembly."
+  248  git push
+  249  cd ..
+  250  cd 06_synteny/
+  251  ll
+  252  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
+  253  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
+  254  history
+  255  ll
+  256  blastall -i Enterococcus_faecalis_V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_faecalis_v583 -p blastn -m 8
+  257  git status
+  258  git rm Enterococcus _faecalis _V583_ref_genome.fna
+  259  git rm Enterococcus\ _faecalis\ _V583_ref_genome.fna
+  260  git add ../../code/Slurms/slurm-3121480.out
+  261  git add --all .
   262  git status
-  263  git add Slurms/slurm-3121480.out
-  264  git add ../.gitignore
+  263  git commit -m "Blast on E.faecalis and casseliflavus with e.faecium."
+  264  git push
   265  ll
-  266  git status
-  267  git commit -m "Updated .gitignore."
-  268  git push
-  269  git status
-  270  git add Slurms/slurm-3121480.out
-  271  git status
-  272  cd ..
-  273  cd analyses/
-  274  ll
-  275  cd 06_synteny/
-  276  ll
-  277  git pull
-  278  cd ..
-  279  lls
-  280  ll
-  281  cd code/
-  282  ll
-  283  git status
+  266  exit
+  267  salloc -A g2018003 -p core -n 2 -t 05:00:00 --reservation=g2018003_14
+  268  ll
+  269  exit
+  270  cd Genome_analysis/
+  271  git pull
+  272  cd analyses/
+  273  ll
+  274  cd 05_rna_seq/
+  275  ll
+  276  cd ../04_annotation/
+  277  ll
+  278  cd Prokka/
+  279  ll
+  280  nano PROKKA_05172018.gff
+  281  module spider prokka
+  282  module spider htseq
+  283  cd ,,
   284  cd ..
   285  ll
-  286  cd data/
-  287  cd ..
-  288  cd analyses/
-  289  ll
-  290  cd 05_rna_seq/
-  291  ll
-  292  cd ..
-  293  ll
+  286  cd ..
+  287  cd code/
+  288  ll
+  289  nano htseq.sh 
+  290  sbatch htseq.sh 
+  291  git status
+  292  git add htseq.sh 
+  293  nano htseq.sh 
   294  cd ..
-  295  ll
-  296  cd code/
+  295  cd Genome_analysis/
+  296  cd analyses/06_synteny/
   297  ll
-  298  cd Slurms/
-  299  ll
-  300  nano slurm-3121480.out 
-  301  cd ..
-  302  ll
-  303  cd ..
-  304  cd analyses/03_genome_assembly/
-  305  ll
-  306  cd PacBio_corrected_Illumina
-  307  ll
-  308  pwd
-  309  module load mummer
-  310  module spider
-  311                  
-  312  module spider mummer
-  313  module load MUMmer/3.9.4alpha 
-  314  mummer -mum /home/lame5423/Genome_analysis/data/DNA/RefGenome/efaecium_ref_genome.fasta /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina/1.fasta > matches_assembly_corrected.mummer
-  315  ll
-  316  cd ..
-  317  ll
-  318  cd PacBio_corrected_Illumina_evaluation/
-  319  ll
-  320  mkdir Mummer
-  321  cd Mummer/
-  322  mv ../../PacBio_corrected_Illumina/matches_assembly_corrected.mummer .
+  298  cd ,,
+  299  cd ..
+  300  cd code/
+  301  ll
+  302  nano slurm-3143878.out 
+  303  nano htseq.sh 
+  304  sbatch htseq.sh 
+  305  git add htseq.sh 
+  306  git status
+  307  git add slurm-3143878.out 
+  308  ll
+  309  nano slurm-3143946.out 
+  310  nano htseq.sh 
+  311  sbatch htseq.sh 
+  312  ll
+  313  nano slurm-3143968.out 
+  314  git status
+  315  git add --all
+  316  git commit -m "Erroneous versions of htseq.sh"
+  317  git push
+  318  ll
+  319  git pull
+  320  nano slurm-3143968.out 
+  321  git pull
+  322  sbatch htseq.sh 
   323  ll
-  324  mummerplot -png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  325  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  326  mummerplot -h
-  327  mummerplot --png new_corrected_assembly.png matches_assembly_corrected.mummer
-  328  mummerplot -t png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  329  mummerplot -t "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  330  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  331  module load mummerplot
-  332  module spider MUMmerplot
-  333  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  334  ll
-  335  cd ..
+  324  nano slurm-3144780.out 
+  325  git pull
+  326  sbatch htseq.sh
+  327  cd Genome_analysis/
+  328  ll
+  329  cd analyses/
+  330  cd 05_rna_seq/
+  331  ll
+  332  nano counts.file 
+  333  cd ..
+  334  exit
+  335  cd Genome_analysis/code/
   336  ll
-  337  cd 06_synteny/
-  338  ll
-  339  mv Enterococcus\ _faecalis\ _V583_ref_genome.fna 
-  340  blastall -i Enterococcus_casseliflavus_ec20.fasta Enterococcus\ _faecalis\ _V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20_e_faecalis_v583 -p blastn -m 8
-  341  mv Enterococcus\ _faecalis\ _V583_ref_genome.fna Enterococcus_faecalis_V583_ref_genome.fna 
-  342  ll
-  343  blastall -i Enterococcus_casseliflavus_ec20.fasta Enterococcus_faecalis_V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20_e_faecalis_v583 -p blastn -m 8
-  344  cd ..
-  345  ll
-  346  cd 03_genome_assembly/
-  347  ll
-  348  cd PacBio_corrected_Illumina_evaluation/
-  349  cd Mummer/
+  337  nano slurm-3144820.out 
+  338  nano htseq.sh 
+  339  sbatch htseq.sh 
+  340  git status
+  341  git add sl*
+  342  git add htseq.sh 
+  343  git commit -m "Added -r name in htseq.sh script."
+  344  git push
+  345  squeue -u lame5423
+  346  git status
+  347  exit
+  348  cd Genome_analysis/
+  349  cd code/
   350  ll
-  351  history
-  352  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  353  ll
-  354  mummerplot --png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  355  mummerplot -png "new_corrected_assembly.png" matches_assembly_corrected.mummer
-  356  mummerplot -h
-  357  mummerplot --png matches_assembly_corrected.mummer
-  358  ll
-  359  git status
-  360  git add --all .
-  361  ll
-  362  git commit -m "Mummerplot on the new assembly."
-  363  git push
-  364  cd ..
-  365  cd 06_synteny/
-  366  ll
-  367  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_ref_genome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
-  368  blastall -i Enterococcus_casseliflavus_ec20.fasta -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
-  369  history
-  370  ll
-  371  blastall -i Enterococcus_faecalis_V583_ref_genome.fna -d efaecium_assemble_genome_chromosome.fasta -o alignment_efaecium_e_faecalis_v583 -p blastn -m 8
-  372  git status
-  373  git rm Enterococcus _faecalis _V583_ref_genome.fna
-  374  git rm Enterococcus\ _faecalis\ _V583_ref_genome.fna
-  375  git add ../../code/Slurms/slurm-3121480.out
-  376  git add --all .
-  377  git status
-  378  git commit -m "Blast on E.faecalis and casseliflavus with e.faecium."
-  379  git push
-  380  ll
-  381  exit
-  382  salloc -A g2018003 -p core -n 2 -t 05:00:00 --reservation=g2018003_14
-  383  ll
-  384  exit
-  385  cd Genome_analysis/
-  386  git pull
-  387  cd analyses/
+  351  nano htseq.sh 
+  352  module load bioinfo-tools
+  353  module load htseq/0.9.1
+  354  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  355  nano htseq.sh 
+  356  module load bioinfo-tools
+  357  module load htseq/0.9.1
+  358  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  359  history
+  360  nano htseq1.sh 
+  361  git status
+  362  git pull
+  363  nano htseq1.sh 
+  364  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  365  nano htseq2.sh 
+  366  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  367  nano htseq.sh 
+  368  htseq-count -f bam -t CDS -r name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  369  > /home/lame5423/Genome_analysis/analyses/05_rna_seq/counts.file
+  370  htseq-count -f bam -t CDS -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  371  htseq-count -f bam -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  372  htseq-count -f bam -t CDS -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  373  htseq-count -f bam -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  374  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  375  htseq-count -f bam -t CDS -r name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  376  htseq-count -f bam -t CDS -r name -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  377  htseq-count -f bam -t CDS -r name -i Name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  378  htseq-count -f bam -t CDS -r name -i name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  379  htseq-count -f bam -t CDS -r name -i Name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  380  exit
+  381  cd Genome_analysis/code/
+  382  nano htseq.sh 
+  383  sbatch htseq.sh 
+  384  git status
+  385  cd Genome_analysis/code/nano htseq.sh
+  386  cd Genome_analysis/codell
+  387  cd Genome_analysis/code/
   388  ll
-  389  cd 05_rna_seq/
-  390  ll
-  391  cd ../04_annotation/
-  392  ll
-  393  cd Prokka/
-  394  ll
-  395  nano PROKKA_05172018.gff
-  396  module spider prokka
-  397  module spider htseq
-  398  cd ,,
-  399  cd ..
-  400  ll
-  401  cd ..
-  402  cd code/
-  403  ll
-  404  nano htseq.sh 
-  405  sbatch htseq.sh 
-  406  git status
-  407  git add htseq.sh 
-  408  nano htseq.sh 
-  409  cd ..
-  410  cd Genome_analysis/
-  411  cd analyses/06_synteny/
-  412  ll
-  413  cd ,,
-  414  cd ..
-  415  cd code/
-  416  ll
-  417  nano slurm-3143878.out 
-  418  nano htseq.sh 
-  419  sbatch htseq.sh 
-  420  git add htseq.sh 
-  421  git status
-  422  git add slurm-3143878.out 
-  423  ll
-  424  nano slurm-3143946.out 
+  389  nano htseq.sh 
+  390  module load bioinfo-tools
+  391  module load htseq/0.9.1
+  392  htseq-count -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  393  git status
+  394  nano slurm-3155276.out 
+  395  cd ..
+  396  cd analyses/05_rna_seq/
+  397  ll
+  398  cd ..
+  399  cd code/
+  400  nano htseq.sh 
+  401  module load bioinfo-tools
+  402  module load htseq/0.9.1
+  403  htseq -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  404  > /home/lame5423/Genome_analysis/analyses/05_rna_seq/counts.file
+  405  module spider htseq
+  406  nano htseq.sh 
+  407  module load bioinfo-tools
+  408  module load htseq/0.9.1
+  409  htseq-count -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  410  nano htseq.sh 
+  411  exit
+  412  cd Genome_analysis/code/
+  413  nano htseq.sh 
+  414  sbatch htseq.sh 
+  415  exit
+  416  cd Genome_analysis/code/
+  417  git status
+  418  nano slurm-3157557.out 
+  419  cd ..
+  420  cd analyses/05_rna_seq/
+  421  ll
+  422  rm counts.file 
+  423  cd ..
+  424  cd code/
   425  nano htseq.sh 
   426  sbatch htseq.sh 
-  427  ll
-  428  nano slurm-3143968.out 
-  429  git status
-  430  git add --all
-  431  git commit -m "Erroneous versions of htseq.sh"
-  432  git push
-  433  ll
-  434  git pull
-  435  nano slurm-3143968.out 
-  436  git pull
-  437  sbatch htseq.sh 
-  438  ll
-  439  nano slurm-3144780.out 
-  440  git pull
-  441  sbatch htseq.sh
-  442  cd Genome_analysis/
-  443  ll
-  444  cd analyses/
-  445  cd 05_rna_seq/
+  427  nano htseq.sh 
+  428  module load bioinfo-tools
+  429  module load htseq/0.9.1
+  430  htseq-count -t gene -i locus_tag -f bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
+  431  exit
+  432  cd Genome_analysis/code/
+  433  nano htseq.sh 
+  434  sbatch htseq.sh 
+  435  ll
+  436  nano slurm-3158599.out 
+  437  cd ..
+  438  git status
+  439  cd analyses/05_rna_seq/
+  440  ll
+  441  rm counts.file 
+  442  cd ..
+  443  cd Genome_analysis/
+  444  git status
+  445  cd code/
   446  ll
-  447  nano counts.file 
-  448  cd ..
-  449  exit
-  450  cd Genome_analysis/code/
-  451  ll
-  452  nano slurm-3144820.out 
-  453  nano htseq.sh 
-  454  sbatch htseq.sh 
-  455  git status
-  456  git add sl*
-  457  git add htseq.sh 
-  458  git commit -m "Added -r name in htseq.sh script."
-  459  git push
-  460  squeue -u lame5423
-  461  git status
-  462  exit
-  463  cd Genome_analysis/
-  464  cd code/
+  447  mv slurm-31* Slurms/
+  448  git status
+  449  git add htseq.sh 
+  450  ll
+  451  git commit -m "Modified htseq.sh script"
+  452  git push
+  453  git status
+  454  git add Slurms/*
+  455  git commit -m "Slurms"
+  456  git push
+  457  history
+  458  history | squeue
+  459  squeue -u lame5423
+  460  nano htseq.sh 
+  461  sbatch htseq.sh 
+  462  ll
+  463  nano bwa_rna_seq_reads_mapping1.sh 
+  464  nano slurm-3159270.out 
   465  ll
-  466  nano htseq.sh 
-  467  module load bioinfo-tools
-  468  module load htseq/0.9.1
-  469  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  470  nano htseq.sh 
-  471  module load bioinfo-tools
-  472  module load htseq/0.9.1
-  473  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  474  history
-  475  nano htseq1.sh 
-  476  git status
-  477  git pull
-  478  nano htseq1.sh 
-  479  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  480  nano htseq2.sh 
-  481  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  482  nano htseq.sh 
-  483  htseq-count -f bam -t CDS -r name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  484  > /home/lame5423/Genome_analysis/analyses/05_rna_seq/counts.file
-  485  htseq-count -f bam -t CDS -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  486  htseq-count -f bam -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  487  htseq-count -f bam -t CDS -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  488  htseq-count -f bam -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  489  htseq-count -f bam -t CDS -r name -i ID /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  490  htseq-count -f bam -t CDS -r name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  491  htseq-count -f bam -t CDS -r name -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  492  htseq-count -f bam -t CDS -r name -i Name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  493  htseq-count -f bam -t CDS -r name -i name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  494  htseq-count -f bam -t CDS -r name -i Name /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  495  exit
-  496  cd Genome_analysis/code/
-  497  nano htseq.sh 
-  498  sbatch htseq.sh 
-  499  git status
-  500  cd Genome_analysis/code/nano htseq.sh
-  501  cd Genome_analysis/codell
-  502  cd Genome_analysis/code/
+  466  mv slurm-3159270.out Slurms/
+  467  ll
+  468  git status
+  469  git add Slurms/*
+  470  git status
+  471  git commit -m "slurm added"
+  472  git push
+  473  nano htseq.sh 
+  474  sbatch htseq.sh 
+  475  ll
+  476  nano slurm-3159825.out 
+  477  ls
+  478  cd ..
+  479  cd analyses/05_rna_seq/
+  480  ll
+  481  cd ..
+  482  cd code/
+  483  ll
+  484  git status
+  485  nano htseq.sh 
+  486  cd ..
+  487  ll
+  488  cd analyses/
+  489  ll
+  490  cd 03_genome_assembly/
+  491  ll
+  492  cd PacBio_assembly
+  493  ll
+  494  grep ">" efaecium.contigs.fasta
+  495  cd ..
+  496  cd code/
+  497  ll
+  498  nano slurm-3159825.out 
+  499  cd ../analyses/05_rna_seq/
+  500  ll
+  501  git status
+  502  cd ../../code/
   503  ll
-  504  nano htseq.sh 
-  505  module load bioinfo-tools
-  506  module load htseq/0.9.1
-  507  htseq-count -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  508  git status
-  509  nano slurm-3155276.out 
+  504  mv slurm-3159825.out Slurms/
+  505  nano Slurms/slurm-3159825.out
+  506  mv Slurms/slurm-3159825.out .
+  507  ll
+  508  cd Slurms/
+  509  ll
   510  cd ..
-  511  cd analyses/05_rna_seq/
-  512  ll
-  513  cd ..
-  514  cd code/
-  515  nano htseq.sh 
-  516  module load bioinfo-tools
-  517  module load htseq/0.9.1
-  518  htseq -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  519  > /home/lame5423/Genome_analysis/analyses/05_rna_seq/counts.file
-  520  module spider htseq
-  521  nano htseq.sh 
-  522  module load bioinfo-tools
-  523  module load htseq/0.9.1
-  524  htseq-count -f bam -t locus_tag -i gene /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  525  nano htseq.sh 
-  526  exit
-  527  cd Genome_analysis/code/
-  528  nano htseq.sh 
-  529  sbatch htseq.sh 
-  530  exit
-  531  cd Genome_analysis/code/
-  532  git status
-  533  nano slurm-3157557.out 
-  534  cd ..
-  535  cd analyses/05_rna_seq/
-  536  ll
-  537  rm counts.file 
-  538  cd ..
-  539  cd code/
-  540  nano htseq.sh 
-  541  sbatch htseq.sh 
-  542  nano htseq.sh 
-  543  module load bioinfo-tools
-  544  module load htseq/0.9.1
-  545  htseq-count -t gene -i locus_tag -f bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_BHI_replicate_3.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_1.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_2.bam /home/lame5423/Genome_analysis/analyses/05_rna_seq/RNA-Seq_Serum_replicate_3.bam /home/lame5423/Genome_analysis/analyses/04_annotation/Prokka/PROKKA_05172018.gff
-  546  exit
-  547  cd Genome_analysis/code/
-  548  nano htseq.sh 
-  549  sbatch htseq.sh 
-  550  ll
-  551  nano slurm-3158599.out 
-  552  cd ..
-  553  git status
-  554  cd analyses/05_rna_seq/
-  555  ll
-  556  rm counts.file 
-  557  cd ..
-  558  cd Genome_analysis/
-  559  git status
-  560  cd code/
-  561  ll
-  562  mv slurm-31* Slurms/
-  563  git status
-  564  git add htseq.sh 
+  511  ll
+  512  git status
+  513  git commit -m "Slurms and htseq.sh"
+  514  git push
+  515  git status
+  516  git add Slurms/slurm-*
+  517  git status
+  518  git add htseq.sh 
+  519  git rm slurm-3143878.out
+  520  git status
+  521  git rm 'slurm-314*'
+  522  git status
+  523  git commit -m "More slurms and modified htseq.sh"
+  524  git push
+  525  git status
+  526  git add slurm-3159825.out 
+  527  git commit -m "The resulting file from htseq.sh"
+  528  git push
+  529  git pull
+  530  cd ../analyses/05_rna_seq/
+  531  ll
+  532  cd ..
+  533  ll
+  534  exit
+  535  cd Genome_analysis/
+  536  pull
+  537  git pull
+  538  cd code/
+  539  ll
+  540  touch mummerplot_corrected_assembly.sh
+  541  nano mummerplot_corrected_assembly.sh 
+  542  module spider mummer
+  543  nano mummerplot_corrected_assembly.sh 
+  544  cd ..
+  545  ll
+  546  cd data/
+  547  ll
+  548  cd DNA/RefGenome/
+  549  ll
+  550  pwd
+  551  cd ..
+  552  cd code/
+  553  nano mummerplot_corrected_assembly.sh 
+  554  sbatch mummerplot_corrected_assembly.sh 
+  555  cd ..
+  556  ll
+  557  cd analyses/
+  558  ll
+  559  cd 03_genome_assembly/
+  560  ll
+  561  cd PacBio_corrected_Illumina
+  562  ll
+  563  cd ../../../code/
+  564  öö
   565  ll
-  566  git commit -m "Modified htseq.sh script"
-  567  git push
+  566  mv slurm-3159825.out Slurms/
+  567  ll
   568  git status
-  569  git add Slurms/*
-  570  git commit -m "Slurms"
-  571  git push
-  572  history
-  573  history | squeue
-  574  squeue -u lame5423
-  575  nano htseq.sh 
-  576  sbatch htseq.sh 
+  569  git add mummerplot_corrected_assembly.sh
+  570  git add Slurms/slurm-3159825.out
+  571  git rm slurm-3159825.out
+  572  ll
+  573  git status
+  574  git commit -m "Added mummerplot script and moved the slurm of htseq"
+  575  git push
+  576  git pull
   577  ll
-  578  nano bwa_rna_seq_reads_mapping1.sh 
-  579  nano slurm-3159270.out 
-  580  ll
-  581  mv slurm-3159270.out Slurms/
-  582  ll
-  583  git status
-  584  git add Slurms/*
-  585  git status
-  586  git commit -m "slurm added"
-  587  git push
-  588  nano htseq.sh 
-  589  sbatch htseq.sh 
-  590  ll
-  591  nano slurm-3159825.out 
-  592  ls
-  593  cd ..
-  594  cd analyses/05_rna_seq/
-  595  ll
-  596  cd ..
-  597  cd code/
-  598  ll
-  599  git status
-  600  nano htseq.sh 
-  601  cd ..
-  602  ll
-  603  cd analyses/
-  604  ll
-  605  cd 03_genome_assembly/
-  606  ll
-  607  cd PacBio_assembly
-  608  ll
-  609  grep ">" efaecium.contigs.fasta
-  610  cd ..
-  611  cd code/
+  578  cd ..
+  579  ll
+  580  cd analyses/
+  581  ll
+  582  cd 05
+  583  cd 05_rna_seq/
+  584  ll
+  585  mv ../../code/a1* .
+  586  mv ../../code/a2* .
+  587  mv ../../code/a3* .
+  588  mv ../../code/a4* .
+  589  mv ../../code/a5* .
+  590  mv ../../code/a6* .
+  591  ll
+  592  git status
+  593  git rm ../../code/a1.txt
+  594  git rm ../../code/a1_3.txt
+  595  git rm ../../code/a2.txt
+  596  git rm ../../code/a3.txt
+  597  git rm ../../code/a4.txt
+  598  git rm ../../code/a4_6.txt
+  599  git rm ../../code/a5.txt
+  600  git rm ../../code/a6.txt
+  601  ll
+  602  git status
+  603  cd ..
+  604  git status
+  605  git commit -m "Moved the files to right directory."
+  606  git push
+  607  ll
+  608  cd ..
+  609  cd analyses/05_rna_seq/
+  610  ll
+  611  cd ..
   612  ll
-  613  nano slurm-3159825.out 
-  614  cd ../analyses/05_rna_seq/
-  615  ll
-  616  git status
-  617  cd ../../code/
-  618  ll
-  619  mv slurm-3159825.out Slurms/
-  620  nano Slurms/slurm-3159825.out
-  621  mv Slurms/slurm-3159825.out .
-  622  ll
-  623  cd Slurms/
+  613  nano .gitignore
+  614  git status
+  615  git add .gitignore
+  616  git commit -m "Modified gitignore so only bam files are not pushed to the remote."
+  617  git push
+  618  cd analyses/05_rna_seq/
+  619  ll
+  620  rm counts.file 
+  621  git pull
+  622  cd ..
+  623  cd code/
   624  ll
-  625  cd ..
-  626  ll
-  627  git status
-  628  git commit -m "Slurms and htseq.sh"
-  629  git push
-  630  git status
-  631  git add Slurms/slurm-*
-  632  git status
-  633  git add htseq.sh 
-  634  git rm slurm-3143878.out
-  635  git status
-  636  git rm 'slurm-314*'
-  637  git status
-  638  git commit -m "More slurms and modified htseq.sh"
-  639  git push
-  640  git status
-  641  git add slurm-3159825.out 
-  642  git commit -m "The resulting file from htseq.sh"
-  643  git push
-  644  git pull
-  645  cd ../analyses/05_rna_seq/
+  625  git status
+  626  git add ../analyses/05_rna_seq/
+  627  git commit -m "Added the transcription levels of each replicate"
+  628  git push
+  629  cd ..
+  630  ll
+  631  cd code/
+  632  ll
+  633  mv counts.file ../analyses/05_rna_seq/
+  634  git status
+  635  git add ../analyses/05_rna_seq/counts.file
+  636  git rm counts.file
+  637  git commit -m "Moved back the counts.file"
+  638  git push
+  639  ll
+  640  module spider artemis
+  641  module load bioinfo-tools
+  642  module load   artemis/16.0.0
+  643  java -jar act.jar
+  644  artemis
+  645  git status
   646  ll
-  647  cd ..
-  648  ll
-  649  exit
-  650  cd Genome_analysis/
-  651  pull
-  652  git pull
-  653  cd code/
-  654  ll
-  655  touch mummerplot_corrected_assembly.sh
-  656  nano mummerplot_corrected_assembly.sh 
-  657  module spider mummer
-  658  nano mummerplot_corrected_assembly.sh 
-  659  cd ..
-  660  ll
-  661  cd data/
-  662  ll
-  663  cd DNA/RefGenome/
-  664  ll
-  665  pwd
-  666  cd ..
-  667  cd code/
-  668  nano mummerplot_corrected_assembly.sh 
-  669  sbatch mummerplot_corrected_assembly.sh 
-  670  cd ..
-  671  ll
-  672  cd analyses/
-  673  ll
-  674  cd 03_genome_assembly/
-  675  ll
-  676  cd PacBio_corrected_Illumina
-  677  ll
-  678  cd ../../../code/
-  679  öö
-  680  ll
-  681  mv slurm-3159825.out Slurms/
-  682  ll
-  683  git status
-  684  git add mummerplot_corrected_assembly.sh
-  685  git add Slurms/slurm-3159825.out
-  686  git rm slurm-3159825.out
-  687  ll
-  688  git status
-  689  git commit -m "Added mummerplot script and moved the slurm of htseq"
-  690  git push
-  691  git pull
-  692  ll
-  693  cd ..
-  694  ll
-  695  cd analyses/
-  696  ll
-  697  cd 05
-  698  cd 05_rna_seq/
-  699  ll
-  700  mv ../../code/a1* .
-  701  mv ../../code/a2* .
-  702  mv ../../code/a3* .
-  703  mv ../../code/a4* .
-  704  mv ../../code/a5* .
-  705  mv ../../code/a6* .
-  706  ll
-  707  git status
-  708  git rm ../../code/a1.txt
-  709  git rm ../../code/a1_3.txt
-  710  git rm ../../code/a2.txt
-  711  git rm ../../code/a3.txt
-  712  git rm ../../code/a4.txt
-  713  git rm ../../code/a4_6.txt
-  714  git rm ../../code/a5.txt
-  715  git rm ../../code/a6.txt
-  716  ll
-  717  git status
-  718  cd ..
-  719  git status
-  720  git commit -m "Moved the files to right directory."
-  721  git push
-  722  ll
-  723  cd ..
-  724  cd analyses/05_rna_seq/
-  725  ll
-  726  cd ..
+  647  git status
+  648  nano slurm-3170299.out 
+  649  nano mummerplot_corrected_assembly.sh 
+  650  git add matches_assembly_corrected.mummer
+  651  git add slurm-3170299.out
+  652  git commit -m "slurm and mummer."
+  653  git push
+  654  git pull
+  655  cd Genome_analysis/
+  656  git pull
+  657  git statu
+  658  git status
+  659  git push
+  660  cd Genome_analysis/
+  661  git pull
+  662  cd code/
+  663  nano slurm-3170299.out 
+  664  nano mummerplot_corrected_assembly.sh 
+  665  sbatch
+  666  sbatch mummerplot_corrected_assembly.sh 
+  667  git status
+  668  ll
+  669  nano slurm-3172599.out 
+  670  ll
+  671  git status
+  672  nano mummerplot_corrected_assembly.sh 
+  673  sbatch mummerplot_corrected_assembly.sh 
+  674  nano slurm-3172599.out 
+  675  nano mummerplot_corrected_assembly.sh 
+  676  sbatch mummerplot_corrected_assembly.sh 
+  677  nano slurm-3172602.out 
+  678  nano mummerplot_corrected_assembly.sh 
+  679  sbatch mummerplot_corrected_assembly.sh 
+  680  nano slurm-3172604.out 
+  681  nano mummerplot_corrected_assembly.sh 
+  682  sbatch mummerplot_corrected_assembly.sh 
+  683  nano slurm-3172605.out
+  684  rm out.fplot 
+  685  rm out.rplot 
+  686  nano mummerplot_corrected_assembly.sh 
+  687  sbatch mummerplot_corrected_assembly.sh 
+  688  nano slurm-3172606.out
+  689  nano mummerplot_corrected_assembly.sh 
+  690  sbatch mummerplot_corrected_assembly.sh 
+  691  ll
+  692  rm out.fplot 
+  693  rm out.rplot 
+  694  rm matches_assembly_corrected.mummer 
+  695  sbatch mummerplot_corrected_assembly.sh 
+  696  nano slurm-3172608.out 
+  697  nano matches_assembly_corrected.mummer 
+  698  nano mummerplot_corrected_assembly.sh 
+  699  sbatch mummerplot_corrected_assembly.sh 
+  700  nano mummerplot_corrected_assembly.sh 
+  701  sbatch mummerplot_corrected_assembly.sh 
+  702  nano mummerplot_corrected_assembly.sh 
+  703  sbatch mummerplot_corrected_assembly.sh 
+  704  nano mummerplot_corrected_assembly.sh 
+  705  sbatch mummerplot_corrected_assembly.sh 
+  706  nano mummerplot_corrected_assembly.sh 
+  707  module load bioinfo-tools
+  708  module load MUMmer/3.9.4alpha
+  709  mummerplot -h
+  710  nano mummerplot_corrected_assembly.sh 
+  711  sbatch mummerplot_corrected_assembly.sh 
+  712  ll
+  713  git status
+  714  nano slurm-3172623.out 
+  715  mv slurm-3172623.out Slurms/
+  716  git status
+  717  rm slurm-317*
+  718  git status
+  719  git add out*
+  720  git add Slurms/slurm-3172623.out
+  721  git add mummerplot_corrected_assembly.sh
+  722  git rm slurm-3170299.out
+  723  git commit -m "Mummerplot alignment visualisation."
+  724  git push
+  725  cd ..
+  726  cd analyses/
   727  ll
-  728  nano .gitignore
-  729  git status
-  730  git add .gitignore
-  731  git commit -m "Modified gitignore so only bam files are not pushed to the remote."
-  732  git push
-  733  cd analyses/05_rna_seq/
-  734  ll
-  735  rm counts.file 
-  736  git pull
-  737  cd ..
-  738  cd code/
-  739  ll
-  740  git status
-  741  git add ../analyses/05_rna_seq/
-  742  git commit -m "Added the transcription levels of each replicate"
-  743  git push
-  744  cd ..
-  745  ll
-  746  cd code/
-  747  ll
-  748  mv counts.file ../analyses/05_rna_seq/
-  749  git status
-  750  git add ../analyses/05_rna_seq/counts.file
-  751  git rm counts.file
-  752  git commit -m "Moved back the counts.file"
-  753  git push
-  754  ll
-  755  module spider artemis
-  756  module load bioinfo-tools
-  757  module load   artemis/16.0.0
-  758  java -jar act.jar
-  759  artemis
+  728  cd 03_genome_assembly/
+  729  ll
+  730  cd PacBio_corrected_Illumina
+  731  ll
+  732  pwd
+  733  cd ../../../code/
+  734  nano mummerplot_corrected_assembly.sh 
+  735  rm out.*
+  736  ll
+  737  sbatch mummerplot_corrected_assembly.sh 
+  738  nano slurm-3172624.out 
+  739  nano mummerplot_corrected_assembly.sh 
+  740  sbatch mummerplot_corrected_assembly.sh 
+  741  git status
+  742  git add matches_assembly_corrected.mummer
+  743  git add mummerplot_corrected_assembly.sh
+  744  git add out.*
+  745  git add slurm-3172625.out
+  746  git add core.8254
+  747  git commit -m "A newer visualisation with the whole assembled genome instead of only the chromosomal."
+  748  git push
+  749  nano mummerplot_corrected_assembly.sh 
+  750  cd ../analyses/03_genome_assembly/
+  751  ll
+  752  cd PacBio_assembly
+  753  ll
+  754  pwd
+  755  cd ../../../code/
+  756  nano mummerplot_assembly.sh 
+  757  sbatch mummerplot_assembly.sh 
+  758  git status
+  759  git add mummerplot_assembly.sh
   760  git status
-  761  ll
-  762  git status
-  763  nano slurm-3170299.out 
-  764  nano mummerplot_corrected_assembly.sh 
-  765  git add matches_assembly_corrected.mummer
-  766  git add slurm-3170299.out
-  767  git commit -m "slurm and mummer."
-  768  git push
-  769  git pull
-  770  cd Genome_analysis/
-  771  git pull
-  772  git statu
-  773  git status
-  774  git push
-  775  cd Genome_analysis/
-  776  git pull
-  777  cd code/
-  778  nano slurm-3170299.out 
-  779  nano mummerplot_corrected_assembly.sh 
-  780  sbatch
-  781  sbatch mummerplot_corrected_assembly.sh 
-  782  git status
-  783  ll
-  784  nano slurm-3172599.out 
-  785  ll
+  761  git add out.*
+  762  git add slurm-31726*
+  763  git add matches_assembly.mummer
+  764  ll
+  765  git status
+  766  git commit -m "Testing visualisation with Pacbio contigs only."
+  767  git push
+  768  nano mummerplot_assembly.sh 
+  769  sbatch mummerplot_assembly.sh 
+  770  nano mummerplot_corrected_assembly.sh 
+  771  sbatch mummerplot_corrected_assembly.sh 
+  772  git status
+  773  git add m*
+  774  git status
+  775  git add out*
+  776  git status
+  777  git commit -m "Testing with also computing the reverse complement matches"
+  778  git push
+  779  nano mummerplot_assembly.sh 
+  780  sbatch mummerplot_assembly.sh 
+  781  git status
+  782  git add out.*
+  783  git commit -m "The plot of Pacbio contigs assembly matches with ref genome."
+  784  git push
+  785  nano mummerplot_assembly.sh 
   786  git status
-  787  nano mummerplot_corrected_assembly.sh 
-  788  sbatch mummerplot_corrected_assembly.sh 
-  789  nano slurm-3172599.out 
+  787  git add mummerplot_assembly.sh
+  788  nano mummerplot_corrected_assembly.sh 
+  789  sbatch mummerplot_corrected_assembly.sh 
   790  nano mummerplot_corrected_assembly.sh 
-  791  sbatch mummerplot_corrected_assembly.sh 
-  792  nano slurm-3172602.out 
-  793  nano mummerplot_corrected_assembly.sh 
-  794  sbatch mummerplot_corrected_assembly.sh 
-  795  nano slurm-3172604.out 
-  796  nano mummerplot_corrected_assembly.sh 
-  797  sbatch mummerplot_corrected_assembly.sh 
-  798  nano slurm-3172605.out
-  799  rm out.fplot 
-  800  rm out.rplot 
-  801  nano mummerplot_corrected_assembly.sh 
-  802  sbatch mummerplot_corrected_assembly.sh 
-  803  nano slurm-3172606.out
-  804  nano mummerplot_corrected_assembly.sh 
-  805  sbatch mummerplot_corrected_assembly.sh 
-  806  ll
-  807  rm out.fplot 
-  808  rm out.rplot 
-  809  rm matches_assembly_corrected.mummer 
-  810  sbatch mummerplot_corrected_assembly.sh 
-  811  nano slurm-3172608.out 
-  812  nano matches_assembly_corrected.mummer 
-  813  nano mummerplot_corrected_assembly.sh 
-  814  sbatch mummerplot_corrected_assembly.sh 
-  815  nano mummerplot_corrected_assembly.sh 
-  816  sbatch mummerplot_corrected_assembly.sh 
-  817  nano mummerplot_corrected_assembly.sh 
-  818  sbatch mummerplot_corrected_assembly.sh 
-  819  nano mummerplot_corrected_assembly.sh 
-  820  sbatch mummerplot_corrected_assembly.sh 
-  821  nano mummerplot_corrected_assembly.sh 
-  822  module load bioinfo-tools
-  823  module load MUMmer/3.9.4alpha
-  824  mummerplot -h
-  825  nano mummerplot_corrected_assembly.sh 
-  826  sbatch mummerplot_corrected_assembly.sh 
-  827  ll
-  828  git status
-  829  nano slurm-3172623.out 
-  830  mv slurm-3172623.out Slurms/
-  831  git status
-  832  rm slurm-317*
-  833  git status
-  834  git add out*
-  835  git add Slurms/slurm-3172623.out
-  836  git add mummerplot_corrected_assembly.sh
-  837  git rm slurm-3170299.out
-  838  git commit -m "Mummerplot alignment visualisation."
-  839  git push
-  840  cd ..
-  841  cd analyses/
-  842  ll
-  843  cd 03_genome_assembly/
-  844  ll
-  845  cd PacBio_corrected_Illumina
-  846  ll
-  847  pwd
-  848  cd ../../../code/
-  849  nano mummerplot_corrected_assembly.sh 
-  850  rm out.*
-  851  ll
-  852  sbatch mummerplot_corrected_assembly.sh 
-  853  nano slurm-3172624.out 
-  854  nano mummerplot_corrected_assembly.sh 
-  855  sbatch mummerplot_corrected_assembly.sh 
-  856  git status
-  857  git add matches_assembly_corrected.mummer
-  858  git add mummerplot_corrected_assembly.sh
-  859  git add out.*
-  860  git add slurm-3172625.out
-  861  git add core.8254
-  862  git commit -m "A newer visualisation with the whole assembled genome instead of only the chromosomal."
-  863  git push
-  864  nano mummerplot_corrected_assembly.sh 
-  865  cd ../analyses/03_genome_assembly/
-  866  ll
-  867  cd PacBio_assembly
-  868  ll
-  869  pwd
-  870  cd ../../../code/
-  871  nano mummerplot_assembly.sh 
-  872  sbatch mummerplot_assembly.sh 
-  873  git status
-  874  git add mummerplot_assembly.sh
-  875  git status
-  876  git add out.*
-  877  git add slurm-31726*
-  878  git add matches_assembly.mummer
-  879  ll
-  880  git status
-  881  git commit -m "Testing visualisation with Pacbio contigs only."
-  882  git push
-  883  nano mummerplot_assembly.sh 
-  884  sbatch mummerplot_assembly.sh 
-  885  nano mummerplot_corrected_assembly.sh 
-  886  sbatch mummerplot_corrected_assembly.sh 
-  887  git status
-  888  git add m*
-  889  git status
-  890  git add out*
-  891  git status
-  892  git commit -m "Testing with also computing the reverse complement matches"
-  893  git push
-  894  nano mummerplot_assembly.sh 
-  895  sbatch mummerplot_assembly.sh 
-  896  git status
-  897  git add out.*
-  898  git commit -m "The plot of Pacbio contigs assembly matches with ref genome."
-  899  git push
-  900  nano mummerplot_assembly.sh 
-  901  git status
-  902  git add mummerplot_assembly.sh
-  903  nano mummerplot_corrected_assembly.sh 
-  904  sbatch mummerplot_corrected_assembly.sh 
-  905  nano mummerplot_corrected_assembly.sh 
-  906  sbatch mummerplot_corrected_assembly_only_chromosomal.sh 
+  791  sbatch mummerplot_corrected_assembly_only_chromosomal.sh 
+  792  ll
+  793  git status
+  794  git add m*
+  795  git status
+  796  git add slurm-31726*
+  797  git commit -m "Tested visualisation with only chromosomal and the whole genome."
+  798  git push
+  799  cd ../analyses/03_genome_assembly/PacBio_assembly
+  800  ll
+  801  cp efaecium.contigs.fasta ../../../code/
+  802  ll
+  803  cd ../../../code/
+  804  ll
+  805  git pull
+  806  python read_write_fasta.py 
+  807  ll
+  808  nano mummerplot_assembly.sh 
+  809  rm efaecium.contigs.fasta 
+  810  mv *.fasta ../analyses/03_genome_assembly/PacBio_assembly
+  811  nano mummerplot_assembly.sh 
+  812  sbatch mummerplot_assembly_only_chromosomal.sh 
+  813  git status
+  814  git add mu*
+  815  git add sl*
+  816  git commit -m "Tested lastly with only canu chromosomal contig assembly matches with ref. genome."
+  817  git push
+  818  git status
+  819  ll
+  820  cd Prokka/
+  821  ll
+  822  ls -la
+  823  cd ..
+  824  rmdir Prokka/
+  825  ll
+  826  cd ..
+  827  cd analyses/
+  828  ll
+  829  cd 03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer/
+  830  ll
+  831  rm *
+  832  pwd
+  833  cd ../../../../code/
+  834  ll
+  835  mv out.* /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer
+  836  ll
+  837  mv m* /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer
+  838  ll
+  839  mv slurm-31726* Slurms/
+  840  ll
+  841  cd ..
+  842  cd analyses/03_genome_assembly/PacBio_assembly
+  843  ll
+  844  cd ..
+  845  git status
+  846  cd 03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer/
+  847  ll
+  848  mv mummerplot_corrected_assembly.sh
+  849  mv mummerplot_corrected_assembly.sh ../../../../code/
+  850  mv mummerplot_corrected_assembly_only_chromosomal.sh ../../../../code/
+  851  mv mummerplot_assembly.sh ../../../../code/
+  852  mv mummerplot_assembly_only_chromosomal.sh ../../../../code/
+  853  ll
+  854  git status
+  855  git add --all
+  856  git add --all .
+  857  git status
+  858  git rm ../../../../code/s*
+  859  git status
+  860  git reset HEAD ../../../../code/samtools_aln-pb_sorted_to_indexed.sh
+  861  git status
+  862  git rm ../../../../code/sl*
+  863  git status
+  864  git add ../../../../code/Slurms/sl*
+  865  git status
+  866  git rm ../../../../code/samtools_aln-pb_sorted_to_indexed.sh
+  867  git rm ../../../../code/ou*
+  868  git rm ../../../../code/mu*
+  869  git rm ../../../../code/ma*
+  870  git status
+  871  git rm ../../../../code/mu*
+  872  git status
+  873  git commit -m "Moved files to correct locations."
+  874  git push
+  875  git pull
+  876  cd ../../../../code/
+  877  ll
+  878  cd Genome_analysis/
+  879  cd code/
+  880  ll
+  881  cd ..
+  882  git pull
+  883  ll
+  884  cd code/
+  885  ll
+  886  cd Genome_analysis/
+  887  ll
+  888  cd code/
+  889  ll
+  890  mv aln-pb.sorted.bam.bai ../analyses/03_genome_assembly/
+  891  mv TruSeq3-PE.fa ../analyses/02_preprocessing/
+  892  ll
+  893  cd ..
+  894  cd analyses/
+  895  ll
+  896  cd ..
+  897  cd data/
+  898  ll
+  899  cd ..
+  900  rm history.txt 
+  901  ll
+  902  git status
+  903  history | history.txt
+  904  history | history.txt
+  905  history > history.txt
+  906  cd analyses/03_genome_assembly/
   907  ll
-  908  git status
-  909  git add m*
-  910  git status
-  911  git add slurm-31726*
-  912  git commit -m "Tested visualisation with only chromosomal and the whole genome."
-  913  git push
-  914  cd ../analyses/03_genome_assembly/PacBio_assembly
-  915  ll
-  916  cp efaecium.contigs.fasta ../../../code/
-  917  ll
-  918  cd ../../../code/
-  919  ll
-  920  git pull
-  921  python read_write_fasta.py 
-  922  ll
-  923  nano mummerplot_assembly.sh 
-  924  rm efaecium.contigs.fasta 
-  925  mv *.fasta ../analyses/03_genome_assembly/PacBio_assembly
-  926  nano mummerplot_assembly.sh 
-  927  sbatch mummerplot_assembly_only_chromosomal.sh 
-  928  git status
-  929  git add mu*
-  930  git add sl*
-  931  git commit -m "Tested lastly with only canu chromosomal contig assembly matches with ref. genome."
-  932  git push
-  933  git status
+  908  mv aln-pb.sorted.bam.bai PacBio_assembly
+  909  cd ..
+  910  cd 02_preprocessing/
+  911  ll
+  912  cd ..
+  913  git status
+  914  git rm code/TruSeq3-PE.fa
+  915  git commit -m "Moved TruSeq3 file and aln-pb.sorted.bam.bai to correct locations."
+  916  git push
+  917  git pull
+  918  git push
+  919  exit
+  920  cd Genome_analysis/
+  921  ll
+  922  git pull
+  923  cd code/
+  924  ll
+  925  nano quast_PacBio_corrected_Illumina.sh 
+  926  sbatch quast_PacBio_corrected_Illumina.sh 
+  927  nano mummerplot_corrected_assembly_only_chromosomal.sh 
+  928  sbatch mummerplot_corrected_assembly_all.sh 
+  929  ll
+  930  nano slurm-3176833.out 
+  931  nano quast_PacBio_corrected_Illumina.sh 
+  932  cd ..
+  933  cd analyses/03_genome_assembly/
   934  ll
-  935  cd Prokka/
+  935  cd PacBio_corrected_Illumina_evaluation/
   936  ll
-  937  ls -la
+  937  mkdir Quast_2
   938  cd ..
-  939  rmdir Prokka/
-  940  ll
-  941  cd ..
-  942  cd analyses/
-  943  ll
-  944  cd 03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer/
-  945  ll
-  946  rm *
-  947  pwd
-  948  cd ../../../../code/
-  949  ll
-  950  mv out.* /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer
-  951  ll
-  952  mv m* /home/lame5423/Genome_analysis/analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer
-  953  ll
-  954  mv slurm-31726* Slurms/
-  955  ll
-  956  cd ..
-  957  cd analyses/03_genome_assembly/PacBio_assembly
-  958  ll
-  959  cd ..
-  960  git status
-  961  cd 03_genome_assembly/PacBio_corrected_Illumina_evaluation/Mummer/
-  962  ll
-  963  mv mummerplot_corrected_assembly.sh
-  964  mv mummerplot_corrected_assembly.sh ../../../../code/
-  965  mv mummerplot_corrected_assembly_only_chromosomal.sh ../../../../code/
-  966  mv mummerplot_assembly.sh ../../../../code/
-  967  mv mummerplot_assembly_only_chromosomal.sh ../../../../code/
-  968  ll
-  969  git status
-  970  git add --all
-  971  git add --all .
-  972  git status
-  973  git rm ../../../../code/s*
-  974  git status
-  975  git reset HEAD ../../../../code/samtools_aln-pb_sorted_to_indexed.sh
-  976  git status
-  977  git rm ../../../../code/sl*
-  978  git status
-  979  git add ../../../../code/Slurms/sl*
-  980  git status
-  981  git rm ../../../../code/samtools_aln-pb_sorted_to_indexed.sh
-  982  git rm ../../../../code/ou*
-  983  git rm ../../../../code/mu*
-  984  git rm ../../../../code/ma*
-  985  git status
-  986  git rm ../../../../code/mu*
+  939  cd code/
+  940  nano quast_PacBio_corrected_Illumina.sh 
+  941  sbatch quast_PacBio_corrected_Illumina.sh 
+  942  ll
+  943  nano slurm-3176834.out 
+  944  git status
+  945  nano slurm-3176835.out 
+  946  git add --all .
+  947  git add ../analyses/03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_2/
+  948  git commit -m "Updated some pictures."
+  949  git push
+  950  exit
+  951  cd Genome_analysis/analyses/05_rna_seq/
+  952  ll
+  953  cd ..
+  954  ll
+  955  cd 06_synteny/
+  956  ll
+  957  module spider blastn
+  958  module spider blast
+  959  module load blast/2.7.1+
+  960  module spider blast/2.7.1+
+  961  module load bioinfo-tools
+  962  module load blast/2.7.1+
+  963  mkdir v1
+  964  ll
+  965  cp E_Faecalis_V583_complete_genome.gb v1/
+  966  cp Enterococcus_casseliflavus_EC20_complete_genome.gb v1/
+  967  cp Enterococcus_casseliflavus_ec20.fasta v1/
+  968  cp Enterococcus_faecalis_V583_ref_genome.fna v1/
+  969  cd ..
+  970  ll
+  971  cd 03_genome_assembly/PacBio_corrected_Illumina
+  972  ll
+  973  cp pilon.fasta ../../06_synteny/v1/
+  974  cd ../../06_synteny/v1/
+  975  formatdb -i pilon.fasta -p F
+  976  module spider blastall
+  977  module spider blast
+  978  module load blast/2.6.0+
+  979  formatdb -i pilon.fasta -p F
+  980  history | grep formatdb
+  981  history
+  982  module load blast/2.2.26
+  983  formatdb -i pilon.fasta -p F
+  984  blastall -i Enterococcus_casseliflavus_ec20.fasta -d
+  985  blastall -i Enterococcus_casseliflavus_ec20.fasta -d pilon.fasta -o alignment_efaecium_e_casseliflavus_e20 -p blastn -m 8
+  986  blastall -i Enterococcus_faecalis_V583_ref_genome.fna -d pilon.fasta -o alignment_efaecium_e_faecalis_v583 -p blastn -m 8
   987  git status
-  988  git commit -m "Moved files to correct locations."
-  989  git push
-  990  git pull
-  991  cd ../../../../code/
-  992  ll
-  993  cd Genome_analysis/
-  994  cd code/
-  995  ll
-  996  cd ..
-  997  git pull
-  998  ll
-  999  cd code/
- 1000  ll
+  988  git add --all .
+  989  git status
+  990  git commit -m "Quick new version of synteny"
+  991  git push
+  992  git status
+  993  git add ../../03_genome_assembly/PacBio_corrected_Illumina_evaluation/Quast_1/
+  994  git status
+  995  git add ../../../history.txt
+  996  git commit -m " A new quast evaluation."
+  997  git push
+  998  git pull
+  999  git status
+ 1000  exit
  1001  cd Genome_analysis/
  1002  ll
- 1003  cd code/
- 1004  ll
- 1005  mv aln-pb.sorted.bam.bai ../analyses/03_genome_assembly/
- 1006  mv TruSeq3-PE.fa ../analyses/02_preprocessing/
- 1007  ll
- 1008  cd ..
- 1009  cd analyses/
- 1010  ll
- 1011  cd ..
- 1012  cd data/
- 1013  ll
- 1014  cd ..
- 1015  rm history.txt 
- 1016  ll
- 1017  git status
- 1018  history | history.txt
- 1019  history > history.txt
+ 1003  git pull
+ 1004  git status
+ 1005  rm history.txt 
+ 1006  cat history > history.txt
+ 1007  history > history.txt
