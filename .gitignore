@@ -20,3 +20,4 @@ code/aln-pb.sorted.bam.bai
 data/DNA/Illumina/
 analyses/05_rna_seq/*.bam
 /code/.Rhistory
+/code/.RData
